@@ -1,5 +1,5 @@
-# grupo_4_petshop
-R= Pet Shop
+﻿# grupo_4_petshop
+### Pet Shop
 
 Productos:
 
@@ -9,34 +9,32 @@ Productos:
 4. Accesorios.
 
 
-*Audiencia Objetiva:
+## Audiencia Objetiva:
 
 Dueños de mascotas y/o animales en general con edad comprendida 
 entre 16 - 50.
 
-*Como ajustaremos nuestra oferta a ese público?
+## Como ajustaremos nuestra oferta a ese público?
 
 (PENDIENTE)
 
-*Breve descripcion de los integrantes del equipo:
+ ## Integrantes del equipo:
 
 Tomás Goldenhorn, 24 años, estudiante de Educación Física y Programador Web Full Stack.
 
-Paso 3) Buscar inspiracion en referentes del mercado:
-
-- Buscar 5 sitios de referencia indicando brevemente porque fueron elegidos.
+## Referentes del mercado
 
 1. https://www.kanu.pet/
-R= Estetica y orden en la categorización de los tipos de mascotas y productos.
+Estetica y orden en la categorización de los tipos de mascotas y productos.
 
 2. https://centropet.com/
-R= Claridad en los productos ofrecidos.
+Claridad en los productos ofrecidos.
 
 3. https://www.catycan.com/
-R= Visualizacion comentarios que ofrecen confiabilidad.
+Visualizacion comentarios que ofrecen confiabilidad.
 
 4. https://mispichos.com/
-R= Marketing con marcas comerciales conocidas por el público.
+Marketing con marcas comerciales conocidas por el público.
 
 5. https://www.natural-life.com.ar/
-R= Diseño responsive, adaptable a distintos dispositivos.
+Diseño responsive, adaptable a distintos dispositivos.
