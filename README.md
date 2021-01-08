@@ -20,7 +20,7 @@ entre 16 - 50.
 
 *Breve descripcion de los integrantes del equipo:
 
-(PENDIENTE)
+Tomas Goldenhorn, 24 años, estudiante de Educación Física y Programador Web Full Stack.
 
 Paso 3) Buscar inspiracion en referentes del mercado:
 
