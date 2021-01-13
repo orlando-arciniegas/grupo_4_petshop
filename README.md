@@ -1,4 +1,6 @@
 ﻿# grupo_4_petshop
+ 
+## Tematica del sitio
 ### Pet Shop
 
 Productos:
@@ -21,6 +23,8 @@ entre 16 - 50.
  ## Integrantes del equipo:
 
 Tomás Goldenhorn, 24 años, estudiante de Educación Física y Programador Web Full Stack.
+
+Michael Bonilla, 25 años, Ingeniero Mecatronico y apasionado por el mundo de la programacion y la inteligencia artificial.
 
 ## Referentes del mercado
 
