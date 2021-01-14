@@ -1,14 +1,15 @@
 ﻿# grupo_4_petshop
  
 ## Tematica del sitio
+
 ### Pet Shop
 
 Productos:
 
-1. Alimentos.
-2. Juguetes.
-3. Medicamentos.
-4. Accesorios.
+* Alimentos.
+* Juguetes.
+* Medicamentos.
+* Accesorios.
 
 
 ## Audiencia Objetiva:
@@ -25,6 +26,8 @@ entre 16 - 50.
 Tomás Goldenhorn, 24 años, estudiante de Educación Física y Programador Web Full Stack.
 
 Michael Bonilla, 25 años, Ingeniero Mecatronico y apasionado por el mundo de la programacion y la inteligencia artificial.
+
+Orlando Arciniegas, 26 años, Abogado y estudiante de desarrollo web fullstack.
 
 ## Referentes del mercado
 
