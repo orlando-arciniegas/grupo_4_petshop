@@ -1,4 +1,4 @@
-ï»¿# grupo_4_petshop
+# grupo_4_petshop
  
 ## Tematica del sitio
 
@@ -14,25 +14,25 @@ Productos:
 
 ## Audiencia Objetiva:
 
-DueÃ±os de mascotas y/o animales en general con edad comprendida 
+Dueños de mascotas y/o animales en general con edad comprendida 
 entre 16 - 50.
 
-## Como ajustaremos nuestra oferta a ese pÃºblico?
+## Como ajustaremos nuestra oferta a ese público?
 
 (PENDIENTE)
 
  ## Integrantes del equipo:
 
-TomÃ¡s Goldenhorn, 24 aÃ±os, estudiante de EducaciÃ³n FÃ­sica y Programador Web Full Stack.
+Tomás Goldenhorn, 24 años, estudiante de Educación Física y Desarrollo Web Full Stack.
 
-Michael Bonilla, 25 aÃ±os, Ingeniero Mecatronico y apasionado por el mundo de la programacion y la inteligencia artificial.
+Michael Bonilla, 25 años, Ingeniero Mecatronico y apasionado por el mundo de la programacion y la inteligencia artificial.
 
-Orlando Arciniegas, 26 aÃ±os, Abogado y estudiante de desarrollo web full stack.
+Orlando Arciniegas, 26 años, Abogado y estudiante de desarrollo web full stack.
 
 ## Referentes del mercado
 
 1. https://www.kanu.pet/
-Estetica y orden en la categorizaciÃ³n de los tipos de mascotas y productos.
+Estetica y orden en la categorización de los tipos de mascotas y productos.
 
 2. https://centropet.com/
 Claridad en los productos ofrecidos.
@@ -41,7 +41,7 @@ Claridad en los productos ofrecidos.
 Visualizacion comentarios que ofrecen confiabilidad.
 
 4. https://mispichos.com/
-Marketing con marcas comerciales conocidas por el pÃºblico.
+Marketing con marcas comerciales conocidas por el público.
 
 5. https://www.natural-life.com.ar/
-DiseÃ±o responsive, adaptable a distintos dispositivos.
+Diseño responsive, adaptable a distintos dispositivos.
