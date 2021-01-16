@@ -19,7 +19,8 @@ entre 16 - 50.
 
 ## Como ajustaremos nuestra oferta a ese público?
 
-(PENDIENTE)
+En tiempos donde es cada vez más frecuente encontrar gente con un smartphone o una tablet o cualquier dispositivo móvil con acceso a internet, caminar hasta la tienda por un producto se está volviendo obsoleto, por eso desde ______ creemos que la mejor solución es adaptarse a este cambio y brindar a nuestro público mayor comodidad a la hora de comprar. Para eso brindamos un sitio web con todos nuestros productos y opción de envío, se podrá crear una cuenta en la web para guardar sus productos favoritos y facilitar aún más la compra de estos, la opción de ver nuestras ofertas en cada artículo.
+
 
  ## Integrantes del equipo:
 
