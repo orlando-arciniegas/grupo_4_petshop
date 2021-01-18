@@ -14,26 +14,26 @@ Productos:
 
 ## Audiencia Objetiva:
 
-Dueños de mascotas y/o animales en general con edad comprendida 
+Dueï¿½os de mascotas y/o animales en general con edad comprendida 
 entre 16 - 50.
 
-## Como ajustaremos nuestra oferta a ese público?
+## Como ajustaremos nuestra oferta a ese pï¿½blico?
 
-En tiempos donde es cada vez más frecuente encontrar gente con un smartphone o una tablet o cualquier dispositivo móvil con acceso a internet, caminar hasta la tienda por un producto se está volviendo obsoleto, por eso desde ______ creemos que la mejor solución es adaptarse a este cambio y brindar a nuestro público mayor comodidad a la hora de comprar. Para eso brindamos un sitio web con todos nuestros productos y opción de envío, se podrá crear una cuenta en la web para guardar sus productos favoritos y facilitar aún más la compra de estos, la opción de ver nuestras ofertas en cada artículo.
+En tiempos donde es cada vez mï¿½s frecuente encontrar gente con un smartphone o una tablet o cualquier dispositivo mï¿½vil con acceso a internet, caminar hasta la tienda por un producto se estï¿½ volviendo obsoleto, por eso desde Doggie creemos que la mejor soluciï¿½n es adaptarse a este cambio y brindar a nuestro pï¿½blico mayor comodidad a la hora de comprar. Para eso brindamos un sitio web con todos nuestros productos y opciï¿½n de envï¿½o, se podrï¿½ crear una cuenta en la web para guardar sus productos favoritos y facilitar aï¿½n mï¿½s la compra de estos, la opciï¿½n de ver nuestras ofertas en cada artï¿½culo.
 
 
  ## Integrantes del equipo:
 
-Tomás Goldenhorn, 24 años, estudiante de Educación Física y Desarrollo Web Full Stack.
+Tomï¿½s Goldenhorn, 24 aï¿½os, estudiante de Educaciï¿½n Fï¿½sica y Desarrollo Web Full Stack.
 
-Michael Bonilla, 25 años, Ingeniero Mecatronico y apasionado por el mundo de la programacion y la inteligencia artificial.
+Michael Bonilla, 25 aï¿½os, Ingeniero Mecatronico y apasionado por el mundo de la programacion y la inteligencia artificial.
 
-Orlando Arciniegas, 26 años, Abogado y estudiante de desarrollo web full stack.
+Orlando Arciniegas, 26 aï¿½os, Abogado y estudiante de desarrollo web full stack.
 
 ## Referentes del mercado
 
 1. https://www.kanu.pet/
-Estetica y orden en la categorización de los tipos de mascotas y productos.
+Estetica y orden en la categorizaciï¿½n de los tipos de mascotas y productos.
 
 2. https://centropet.com/
 Claridad en los productos ofrecidos.
@@ -42,7 +42,7 @@ Claridad en los productos ofrecidos.
 Visualizacion comentarios que ofrecen confiabilidad.
 
 4. https://mispichos.com/
-Marketing con marcas comerciales conocidas por el público.
+Marketing con marcas comerciales conocidas por el pï¿½blico.
 
 5. https://www.natural-life.com.ar/
-Diseño responsive, adaptable a distintos dispositivos.
+Diseï¿½o responsive, adaptable a distintos dispositivos.
