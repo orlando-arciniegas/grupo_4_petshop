@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furry</title>
+
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!------------ HEADER  ---------->
+    <header>
+        <figure id="logo">
+            <a href="/">
+                <img src="./img/logo.png" alt="logo furry">
+            </a>
+        </figure>
+
+        <div id="cart">
+            <i class="fa fa-shopping-cart"></i>
+            <p>0</p>
+        </div>
+
+        <div class="burger-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+
+
+        <form action="/" method="GET" id=buscar>
+            <input placeholder="Buscar productos, marcas" type="text" name="buscar">
+            <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+    </header>
+
+    <!------------ FIN HEADER  ---------->
+
+    <!------------ MAIN  ---------->
+    <main>
+        <section id="banner">
+            <figure>
+                <img src="./img/Tarjetas-Regalo-Tienda.jpeg" alt="Banner de la tienda">
+            </figure>
+        </section>
+
+        <section class="productos-destacados">
+
+            <span class="titulo">PRODUCTOS DESTACADOS</span>
+            <hr>
+
+            <article class="producto-individual">
+                <figure>
+                    <img src="./img/Nutrecan-Adulto-Raza-Mediana-Grande.jpg"
+                        alt="Nutrecan Adulto Raza Mediana y Grande">
+                </figure>
+
+                <div class="detalles-producto">
+                    <strong class="descripcion">Alimento Para Perro - Nutrecan Adulto Raza Med/Grande</strong>
+                    <p class="precio">$ 6.770</p>
+
+                        <div class="detalles-cantidad">
+                            <button type="" class="menos">-</button>
+                            <input type="text" value="1">
+                            <button class="mas">+</button>
+
+                            <button class="comprar">comprar</button>
+                        </div>
+
+                       
+                   
+                </div>
+            </article>
+
+            <article class="producto-individual">
+                <figure>
+                    <img src="./img/Nutrecan-Adulto-Raza-Mediana-Grande.jpg"
+                        alt="Nutrecan Adulto Raza Mediana y Grande">
+                </figure>
+
+                <div class="detalles-producto">
+                    <p class="precio">$ 6.770</p>
+                    <strong class="descripcion">Alimento Para Perro - Nutrecan Adulto Raza Med/Grande</strong>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <!------------ FIN MAIN ---------->
+
+</body>
+
+</html>
