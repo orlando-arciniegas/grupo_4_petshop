@@ -8,19 +8,22 @@ img {
 }
 /*------------------------ HEADER ---------------------------*/
 header {
-    padding: 20px;
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    width: 100%;
+}
+.header-top {
+    padding: 10px 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     background-color: #00818e;
-    position: fixed;
-    z-index: 2;
-    top: 0px;
+    width: 100%;
 }
 #logo {
-    width: 50%;
-    padding: 5px;
+    width: 40%;
     margin-right: 10vw;
 }
 #cart {
@@ -32,8 +35,14 @@ header {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
+.fa-user-alt {
+    font-size: 8vw;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
 #cart p {
-    font-size: 5vw;
+    font-size: 4vw;
     position: absolute;
     top: -15px;
     right: -7px;
@@ -44,6 +53,7 @@ header {
     color: black;
     font-weight: bold;
     border: 1.5px black solid;
+    padding: 2px;
 }
 .fa-bars {
     font-size: 10vw;
@@ -73,14 +83,55 @@ header {
 .search-btn:hover{
     cursor: pointer;
 }
+#account ul {
+   list-style: none;
+   z-index: 4;
+}
+#account ul:hover ul {
+    display: block;
+}
+#account ul li {
+    position: relative;
+    float: left;
+    white-space:nowrap;
+}
+#account ul ul li {
+    width: 100%;
+}
+#account ul ul li:hover {
+    background-color: #005661;
+}
+#account ul a {
+    display:block;
+    color:white;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    padding:10px;
+    letter-spacing:1px;
+   }
+#account ul ul {
+    list-style: none;
+    display: none;
+    position:absolute;
+    top:150%;
+    left:-50%;
+    background:#00818e;
+    border: 1px solid black;
+ }
+ #menu ul ul li {
+    float:none;
+    width:400px
+   }
+.header-bottom {
+    display: none;
+}
 /*------------------------ FIN HEADER ---------------------------*/
 
 /*------------------------  MAIN ---------------------------*/
 main {
-    background-color: rgb(241, 241, 241)
-}
-#banner {
-    margin-top: 155px;
+    background-color: rgb(241, 241, 241);
+    margin-top: calc(15% + 70px);
 }
 .productos-destacados {
     width: 90%;
@@ -94,11 +145,13 @@ main {
 }
 .productos-destacados .titulo{
     text-align: center;
+    margin: 10px auto;
+    z-index: 1;    
+}
+.productos-destacados .titulo span{
     padding: 10px;
     border: 2px solid gray;
     border-radius: 10px;
-    margin: auto;
-    z-index: 1;
     background-color: white;
     font-weight: bold;
     font-size: 4vw;
@@ -108,7 +161,7 @@ hr {
     height: 3px;
     background-color: gray;
     position: absolute;
-    top: 22px;
+    top: 1%;
     z-index: 0;
 }
 .producto-individual {
@@ -116,17 +169,19 @@ hr {
     width: 90%;
     background-color: white;
     border-radius: 10px;
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 .producto-individual img {
     padding: 15px;
+    border-bottom: 1.7px solid #00818e;
 } 
 .producto-individual:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 .detalles-producto {
-    border-top: 1.7px solid #00818e;
     padding: 10px 15px;
+    width: 100%;
 }
 .precio {
     color: #F8904E;
@@ -150,6 +205,11 @@ hr {
     height: 10vw;
     background-color: transparent;
     font-size: 7vw;
+    transition: background-color 1.5s ;
+}
+.detalles-cantidad .mas:active,
+.detalles-cantidad .menos:active {
+    background-color: #00818e;
 }
 .detalles-cantidad .mas{
     border-radius: 0 .4rem .4rem 0;
@@ -166,8 +226,7 @@ hr {
     height: 10vw;
     text-align: center;
 }
-.detalles-cantidad .comprar {
-   justify-self: stretch;
+.btn {
    margin-left: auto;
    width: 45%;
    background-color: #00818e;
@@ -175,18 +234,167 @@ hr {
    border: none;
    border-radius: .4rem;
    font-weight: bold;
-   font-size: 4vw;
+   font-size: 3.5vw;
+   transition: background-color 1.5s ;
+
 }
-
-
-
+.btn:hover {
+  background-color: #005661;    
+ }
+ .pago-envio {
+     margin-top: 20px;
+     text-align: center;
+     background-color: white;
+ }
+ .pago-envio .pago span {
+    margin: 15px 0px;
+    color: #F8904E;
+    font-weight: bold;
+    font-size: 7vw;
+    display: inline-block;
+ }
+ .pago-envio .envio {
+     display: flex;
+     flex-wrap: wrap;
+     margin: 20px auto 0px;
+     padding-bottom: 20px;
+     align-items: center;
+     width: 90%;
+ }
+ .pago-envio .envio span {
+     width: 65%;
+     font-size: 5vw;
+     text-align: left;
+    
+ }
+ .pago-envio .envio .truck {
+     width: 35%;
+     color: #00818e;
+     font-size: 12vw;
+ }
+ .newsletter {
+    background-color: #F8904E;
+    color:white;
+    padding: 20px;
+ }
+ .newsletter h4 {
+     font-weight: bold;
+     text-align: center;
+     font-size: 5vw;
+     padding: 10px;
+ }
+ .group-checkbox {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+ }
+ .group-checkbox p {
+     text-align: center;
+     font-size: 4vw;
+     display: inline-block;
+     width: 100%;
+     padding-bottom: 10px;
+ }
+ .group-checkbox input[type=checkbox] {
+     transform: scale(1.4);
+     padding: 10px;
+ }
+ .group-checkbox i {
+     font-size: 5vw;
+     margin-right: 5px;
+ }
+.input-control{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.newsletter input[type=email] {
+    border-radius: 5px;
+    height: 35px;
+    width: 60%;
+}
+.newsletter .btn {
+    width: 35%;
+}
 /*------------------------ FIN MAIN ---------------------------*/
 
-
-
-@media (min-width:761px) {
+@media (min-width:600px) {
+    .header-top {
+        padding: 10px 50px;
+    }
+    #logo {
+        width: 25%;
+        margin: 0px;
+    }
+    #account {
+        margin-left: auto;
+    }
+    .fa-shopping-cart,
+    .fa-user-alt,
+    .fa-bars {
+        font-size: 6vw;
+    }
     #cart {
-        order: 2;
+        margin: 0px 30px;
+    }
+    #cart p {
+        font-size: 3vw;
+    }
+    main {
+        margin-top: calc(10% + 50px);
+    }
+    hr {
+    top: 2.5%;
+    }
+    .productos-destacados{
+        justify-content: space-between;
+    }
+    .producto-individual {
+        width: 45%;
+    }
+    .precio {
+        font-size: 3.5vw;
+    }
+    .detalles-cantidad .mas, 
+    .detalles-cantidad .menos{
+        font-size: 4vw;
+        width: 5vw;
+        height: 5vw;
+    }
+    .detalles-cantidad input {
+        width: 7vw;
+        height: 5vw;
+    }
+    .btn {
+        font-size: 2.5vw;
+    }
+    .pago-envio .pago span {
+        font-size: 5vw;
+    }
+    .pago-envio .envio span {
+        font-size: 3.5vw;
+    }
+    .newsletter h4 {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:992px) { 
+    .header-top {
+        padding: 10px 150px 5px;
+    }
+    .header-bottom {
+        background-color:white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        border: 1px solid black;
+    }
+    #logo {
+        width: 13%;
+        margin-right: 0px;
     }
     .burger-menu {
         display: none;
@@ -194,9 +402,150 @@ hr {
     #buscar {
         order: 1;
         width: 50%;
+        margin: auto;
     }
-    #logo {
+    .fa-shopping-cart,
+    .fa-user-alt {
+        font-size: 3vw;
+    }
+    #cart {
+        order: 2;
+        margin: 0px 40px 0px 20px;
+    }
+    #account {
+        order: 2;
+        margin-left: auto;
+    }
+    #account ul ul {
+        top:100%;
+     }
+    #cart p {
+        font-size: 1.3vw;
+        top: -12px;
+        right: -10px;
+        min-width: 2vw;
+    }
+    .menu {
+        display: block;
+    }
+    .menu ul {
+        display: flex;
+        list-style: none;
+    }
+    .menu ul li {
+        padding: 10px;
+        border-right: 1px solid black;
+        transition: background-color 1.5s;
+    }
+    .menu ul li:hover {
+        background-color: #F8904E;
+        opacity: 0.9;
+    }
+    .header-bottom a {
+        text-decoration: none;
+        color: black;
+    }
+    .header-bottom a {
+        font-size: 17px;
+    }
+    .ofertas {
+        padding: 7px;
+        margin: 12px;
+        background-color: #F8904E;
+        border-radius: 7px;
+        transition: all 1s;
+    }
+    .ofertas:hover {
+        color: white;
+        background-color: #00818e ;
+    }
+    .ofertas:hover a {
+        color: white;
+    }
+    main {
+        margin-top: calc(5% + 40px);
+    }
+    hr {
+        top: 35px;
+    }
+    .productos-destacados .titulo {
+        width: 100%;
+        margin: 20px auto;
+    }
+    .productos-destacados .titulo span{
+        font-size: 25px;
+        width: 100%;
+    }
+    .producto-individual {
+        width: 23%;
+    }
+    .precio {
+        font-size: 1.5vw;
+    }
+    .detalles-cantidad .mas, 
+    .detalles-cantidad .menos{
+        font-size: 1.5vw;
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+    .detalles-cantidad input {
+        width: 3vw;
+        height: 2.5vw;
+    }
+    .btn {
+        font-size: 16px;
+    }
+    .pago-envio {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px;
+        align-items: center;
+    }
+    .pago-envio .pago,
+    .pago-envio .envio {
+        width: 45%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .pago-envio .pago span {
+        font-size: 30px;
+        width: 25%;
+    }
+    .pago-envio .pago figure {
+        width: 65%;
+    }
+    .pago-envio .envio span {
+        font-size: 30px
+    }
+    .pago-envio .envio .truck {
+        font-size: 90px;
+    }
+    .newsletter,
+    .newsletter form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .newsletter h4 {
+        font-size: 30px;
         width: 20%;
     }
+    .newsletter form {
+        width: 70%;
+    }
+    .group-checkbox {
+        width: 40%;
+    }
+    .group-checkbox p {
+        font-size: 20px;
+    }
+    .group-checkbox i {
+        font-size: 40px;
+    }
+    .input-control {
+        width: 60%;
+    }
 }
-

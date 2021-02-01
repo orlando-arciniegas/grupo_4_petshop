@@ -14,26 +14,56 @@
 <body>
     <!------------ HEADER  ---------->
     <header>
-        <figure id="logo">
-            <a href="/">
-                <img src="./img/logo.png" alt="logo furry">
+        <div class="header-top">
+            <figure id="logo">
+                <a href="/">
+                    <img src="./img/logo.png" alt="logo furry">
+                </a>
+            </figure>
+
+            <div id="account">
+                <ul>
+                    <li><i class="fa fa-user-alt"></i>
+                        <ul>
+                            <li><a href="login">Iniciar sesion</a></li>
+                            <li><a href="register">Registrarse</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="cart">
+                <a href="cart">
+                <i class="fa fa-shopping-cart"></i>
+                <p>0</p>
             </a>
-        </figure>
+            </div>
 
-        <div id="cart">
-            <i class="fa fa-shopping-cart"></i>
-            <p>0</p>
+            <div class="burger-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+
+            <form action="/" method="GET" id=buscar>
+                <input placeholder="Buscar productos, marcas" type="text" name="buscar">
+                <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+            </form>
         </div>
 
-        <div class="burger-menu">
-            <i class="fa fa-bars"></i>
+        <div class="header-bottom">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Alimentos</a></li>
+                    <li><a href="#">Juguetes</a></li>
+                    <li><a href="#">Medicamentos</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Snacks</a></li>
+                    <li><a href="#">Belleza e higiene</a></li>
+                </ul>
+            </nav>
+            <div class="ofertas">
+                <a href="#">OFERTAS <i class="fas fa-tags"></i></a>
+            </div>
         </div>
-
-
-        <form action="/" method="GET" id=buscar>
-            <input placeholder="Buscar productos, marcas" type="text" name="buscar">
-            <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
-        </form>
     </header>
 
     <!------------ FIN HEADER  ---------->
@@ -47,8 +77,9 @@
         </section>
 
         <section class="productos-destacados">
-
-            <span class="titulo">PRODUCTOS DESTACADOS</span>
+            <div class="titulo">
+            <span>PRODUCTOS DESTACADOS</span>
+        </div>
             <hr>
 
             <article class="producto-individual">
@@ -61,31 +92,121 @@
                     <strong class="descripcion">Alimento Para Perro - Nutrecan Adulto Raza Med/Grande</strong>
                     <p class="precio">$ 6.770</p>
 
-                        <div class="detalles-cantidad">
-                            <button type="" class="menos">-</button>
-                            <input type="text" value="1">
-                            <button class="mas">+</button>
+                    <div class="detalles-cantidad">
+                        <button type="" class="menos">-</button>
+                        <input type="text" value="1">
+                        <button class="mas">+</button>
 
-                            <button class="comprar">comprar</button>
-                        </div>
-
-                       
-                   
+                        <button class="btn">comprar</button>
+                    </div>
                 </div>
             </article>
 
             <article class="producto-individual">
                 <figure>
-                    <img src="./img/Nutrecan-Adulto-Raza-Mediana-Grande.jpg"
-                        alt="Nutrecan Adulto Raza Mediana y Grande">
+                    <img src="./img/Antipulgas-Advantage-gatos.jpg" alt="Antipulgas Advantage para gatos">
                 </figure>
 
                 <div class="detalles-producto">
-                    <p class="precio">$ 6.770</p>
-                    <strong class="descripcion">Alimento Para Perro - Nutrecan Adulto Raza Med/Grande</strong>
+                    <strong class="descripcion">Antipulgas Advantage gatos hasta 4 kg x0.4 ml para gato</strong>
+                    <p class="precio">$ 2.500</p>
+
+                    <div class="detalles-cantidad">
+                        <button type="" class="menos">-</button>
+                        <input type="text" value="1">
+                        <button class="mas">+</button>
+
+                        <button class="btn">comprar</button>
+                    </div>
                 </div>
             </article>
 
+            <article class="producto-individual">
+                <figure>
+                    <img src="./img/Bebedero-Azul.jpg" alt="Bebedero azul">
+                </figure>
+
+                <div class="detalles-producto">
+                    <strong class="descripcion">Bebedero color azul para mascotas</strong>
+                    <p class="precio">$ 3.500</p>
+
+                    <div class="detalles-cantidad">
+                        <button type="" class="menos">-</button>
+                        <input type="text" value="1">
+                        <button class="mas">+</button>
+
+                        <button class="btn">comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-individual">
+                <figure>
+                    <img src="./img/Kinky-Collar-Negro-Camo-Verde-Huesos-1.jpg"
+                        alt="Kinky Collar Negro Camo Verde Huesos">
+                </figure>
+
+                <div class="detalles-producto">
+                    <strong class="descripcion">Kinky Collar Negro Camo Verde Huesos</strong>
+                    <p class="precio">$ 1.650</p>
+
+                    <div class="detalles-cantidad">
+                        <button class="menos">-</button>
+                        <input type="text" value="1">
+                        <button class="mas">+</button>
+
+                        <button class="btn">comprar</button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="pago-envio">
+            <article class="pago">
+                <span>MÉTODOS DE PAGO</span>
+                <figure>
+                    <img src="./img/Medios-Pago1.jpg" alt="medios de pago aceptados">
+                </figure>
+            </article>
+
+            <article class="envio">
+                <i class="fas fa-truck truck"></i>
+                <span>ENVIOS GRATIS POR COMPRAS SUPERIORES A $ 20.000</span>
+            </article>
+
+        </section>
+
+        <section class="newsletter">
+            <h4>¡Suscríbete al Newsletter y obtén 10% de descuento en tu primera compra!</h4>
+
+            <form action="#" method="GET">
+
+                <div class="group-checkbox">
+                    <p>¿Qué mascota tienes?</p>
+                    <div>
+                        <label for="perro"><i class="fas fa-dog"></i></label>
+                        <input type="checkbox" name="intereses" id="perro" value="perro">
+                    </div>
+                    <div>
+                        <label for="gato"><i class="fas fa-cat"></i></label>
+                        <input type="checkbox" name="intereses" id="gato" value="gato">
+                    </div>
+                    <div>
+                        <label for="aves"><i class="fas fa-duck"></i></label>
+                        <input type="checkbox" name="intereses" id="aves" value="aves">
+                    </div>
+                    <div>
+                        <label for="roedores"><i class="fas fa-rabbit"></i></label>
+                        <input type="checkbox" name="intereses" id="roedores" value="roedores">
+                    </div>
+                </div>
+                <div class="input-control">
+                    <input type="email" name="correo" placeholder="Ingresa tu Email" required>
+                    <button class="btn" type="submit">ENVIAR</button>
+                </div>
+
+            </form>
         </section>
     </main>
     <!------------ FIN MAIN ---------->
