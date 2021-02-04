@@ -6,6 +6,12 @@
 img {
     width: 100%;
 }
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
 /*------------------------ HEADER ---------------------------*/
 header {
     position: fixed;
@@ -84,11 +90,7 @@ header {
     cursor: pointer;
 }
 #account ul {
-   list-style: none;
    z-index: 4;
-}
-#account ul:hover ul {
-    display: block;
 }
 #account ul li {
     position: relative;
@@ -111,14 +113,20 @@ header {
     letter-spacing:1px;
    }
 #account ul ul {
-    list-style: none;
-    display: none;
+    transform: scale(0);
+    transform-origin: top;
     position:absolute;
     top:150%;
     left:-50%;
     background:#00818e;
     border: 1px solid black;
+    transition: transform 0.5s;
+    opacity: 0;
  }
+ #account ul:hover ul {
+    transform: scale(1);
+    opacity: 1;
+}
  #menu ul ul li {
     float:none;
     width:400px
@@ -318,6 +326,56 @@ hr {
 }
 /*------------------------ FIN MAIN ---------------------------*/
 
+/*------------------------ FOOTER ---------------------------*/
+footer {
+    padding: 20px 10px 5px;
+    background-color: #00818e;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.logo_redes_sociales {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.logo_redes_sociales img {
+    width: 70%;
+}
+.logo_redes_sociales i {
+    color: white;
+    font-size: 7vw;
+    margin: 5px 10px;
+}
+.footer-list {
+    width: 50%;
+    margin-bottom: 20px;
+}
+footer section:nth-child(4){
+   margin-right: auto;
+}
+.footer-list h4 {
+    color: white;
+    font-size: 6vw;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.footer-list ul {
+    margin-left: 5px;
+}
+.footer-list a {
+    font-size: 4vw;
+    color: white;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+
+/*------------------------ FIN FOOTER ---------------------------*/
+
 @media (min-width:600px) {
     .header-top {
         padding: 10px 50px;
@@ -377,6 +435,27 @@ hr {
     .newsletter h4 {
         font-size: 3.5vw;
     }
+    footer {
+        justify-content: space-around;
+    }
+    .logo_redes_sociales {
+        width: 60%;
+    }
+    .footer-list {
+        width: 40%;
+    }
+    footer section:nth-child(4),
+    footer section:nth-child(3) {
+        margin-left: auto;
+        margin-right: 0px;
+     }
+    .footer-list h4 {
+         font-size: 4vw;
+    }
+    .footer-list a {
+        font-size: 3vw;
+    }
+
 }
 
 @media (min-width:992px) { 
@@ -430,7 +509,6 @@ hr {
     }
     .menu ul {
         display: flex;
-        list-style: none;
     }
     .menu ul li {
         padding: 10px;
@@ -442,7 +520,6 @@ hr {
         opacity: 0.9;
     }
     .header-bottom a {
-        text-decoration: none;
         color: black;
     }
     .header-bottom a {
@@ -478,6 +555,7 @@ hr {
     }
     .producto-individual {
         width: 23%;
+        margin-bottom: 15px;
     }
     .precio {
         font-size: 1.5vw;
@@ -494,6 +572,11 @@ hr {
     }
     .btn {
         font-size: 16px;
+    }
+    .btn:hover,
+    .detalles-cantidad .mas:hover,
+    .detalles-cantidad .menos:hover {
+        cursor: pointer;
     }
     .pago-envio {
         display: flex;
@@ -547,5 +630,35 @@ hr {
     }
     .input-control {
         width: 60%;
+    }
+    footer {
+        justify-content: flex-start;
+        padding: 20px;
+    }
+    .logo_redes_sociales {
+        width: 25%;
+    }
+    .logo_redes_sociales img {
+        width: 50%;
+    }
+    .logo_redes_sociales i {
+        font-size: 30px;
+    }
+    .footer-list {
+        width: 25%;
+    }
+    footer section:nth-child(4),
+    footer section:nth-child(3) {
+        margin-left: 0px;
+        margin-right: 0px;
+     }
+    .footer-list h4 {
+         font-size: 27px;
+    }
+    .footer-list a {
+        font-size: 17px;
+    }
+    .copyright {
+        font-size: 15px;
     }
 }
