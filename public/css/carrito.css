@@ -42,9 +42,9 @@
 }
 .precioCarro{
     font-size: xx-large;
-    margin-top: 10%;
+    margin-top: 30%;
     color: #F8904E;
-    font-weight: 900;
+    font-weight: 800;
 }
 .separador{
     border-bottom: #00818e solid;
@@ -94,7 +94,7 @@
     justify-content: space-between;
 }
 .quitar{
-    margin-top: 35px;
+    margin-top: 20px;
     text-decoration: none;
     color: #00818e;
 }
@@ -110,6 +110,14 @@
     bottom: 50px;
     justify-content: center;
     font-size: x-small;
+}
+.sumaProd{
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    margin-left: 20px;
+    flex-direction: column;
+
 }
 
 @media(min-width:769px){
@@ -168,8 +176,9 @@
     }
     .precioCarro{
         font-size: xx-large;
-        margin-top: 110px;
+        margin-top: 50px;
         margin-left: -220px;
+        margin-bottom: 50px;
     }
     .separador{
         border-bottom: #00818e solid;
@@ -227,5 +236,14 @@
         margin-left: 100px;
         bottom: 50px;
         justify-content: center;
+    }
+    .sumaProd{
+        display: flex;
+        width: 100%;
+        height: 6vh;
+        margin-left: 20px;
+        flex-direction: column;
+        margin-top: 50px;
+    
     }
 }
