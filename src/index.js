@@ -12,3 +12,4 @@ app.listen(app.get('puerto'), ()=> console.log(`servidor corriendo en el puerto 
 // RUTAS ----------------------------------
 
 app.use('/', require('./routes/home.js'))
+

@@ -12,6 +12,12 @@ router.route('/register')
 router.route('/login')
     .get((req, res) => res.sendFile(path.resolve(__dirname, '../views/login.html')))
 
+router.route('/detalle')
+    .get((req, res) => res.sendFile(path.resolve(__dirname, '../views/detalle.html')))
+
+router.route('/carrito')
+    .get((req, res) => res.sendFile(path.resolve(__dirname, '../views/carrito.html')))
+
 
 module.exports = router
 

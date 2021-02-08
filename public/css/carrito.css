@@ -1,0 +1,204 @@
+.contenedor{
+    border: black hidden;
+    margin: auto;
+    width: 70vw;
+    height: 10%;
+    margin-top: 40%;
+    margin-bottom: 20%;
+    background-color: white;
+    padding: 15px;
+}
+.button{
+    border-radius: 5px;
+    background-color: #00818e;
+    margin-top: 5%;
+    width: 60%;
+    height: 5vh;
+    color: white;
+    align-content: center;
+}
+.foto{
+    display: flex;
+    width: 100%;
+    border: solid #00818e;
+    border-radius: 8%;
+}
+.carrito{
+    display: flex;
+    flex-direction: column;
+}
+.titulo{
+    font-family: sans-serif;
+    position: relative;
+    margin-bottom: 10%;
+    flex-wrap: nowrap;
+    text-align: center;
+    font-size: larger;
+}
+.detalle{
+    font-size: x-large;
+    text-align: center;
+    margin-top: 5%;
+}
+.precioCarro{
+    font-size: xx-large;
+    margin-top: 10%;
+    color: #F8904E;
+    font-weight: 900;
+}
+.separador{
+    border-bottom: #00818e solid;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    width: 100%;
+    right: 10%;
+}
+.pFinal{
+    font-family: sans-serif;
+    color: #F8904E;
+    font-weight: 900;
+    font-size: 8vw;
+    margin-top: 10px;
+}
+
+.total{
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 8vw;
+    margin-top: 10px;
+    margin-right: 8%;
+}
+.descuento{
+    display: flex;
+    flex-direction: column;
+    margin-left: 7px;
+    width: 50%;
+    margin-top: 10px;
+    height: 50%;
+    margin-bottom: 7px;
+}
+.final{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px
+}
+.barraDesc{
+    border-radius: 5px;
+    width: 40vw;
+    height: 5vh;
+}
+.btnPrecio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.quitar{
+    margin-top: 35px;
+    text-decoration: none;
+    color: #00818e;
+}
+
+@media(min-width:769px){
+    .contenedor{
+        border: #00818e solid;
+        border-radius: 5px;
+        margin: auto;
+        width: 80vw;
+        height: 10%;
+        margin-top: 20%;
+        margin-bottom: 20%;
+        background-color: white;
+    }
+    .button{
+        border-radius: 5px;
+        background-color: #00818e;
+        margin-top: 5%;
+        width: 60%;
+        height: 4vh;
+        color: white;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        bottom: 50px;
+        justify-content: center;
+    }
+    .foto{
+        display: flex;
+        width: 20%;
+        border: solid #00818e;
+        border-radius: 8%;
+        margin-left: 10%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .carrito{
+        display: flex;
+        flex-direction: row;
+    }
+    .titulo{
+        font-family: sans-serif;
+        font-size: xx-large;
+        position: relative;
+        margin-bottom: 10%;
+        flex-wrap: nowrap;
+        margin-top: 25px;
+    }
+    .detalle{
+        display: flex;
+        font-family: sans-serif;
+        font-size: x-large;
+        text-align: start;
+        flex-direction: row;
+        left: 5px;
+        flex-wrap: nowrap;
+        margin-left: -250px;
+    }
+    .precioCarro{
+        font-size: xx-large;
+        margin-top: 110px;
+        margin-left: -220px;
+    }
+    .separador{
+        border-bottom: #00818e solid;
+        margin-bottom: 10%;
+        margin-top: 10%;
+        width: 90%;
+        align-items: center;
+        margin: auto;
+    }
+    .pFinal{
+        font-family: sans-serif;
+        color: #F8904E;
+        font-weight: 300;
+        font-size: 5vw;
+        margin-top: 10px;
+    }
+    
+    .total{
+        font-family: sans-serif;
+        font-weight: 500;
+        font-size: 5vw;
+        margin-top: 10px;
+        margin-right: 8%;
+    }
+    .descuento{
+        display: flex;
+        flex-direction: row;
+        margin-right: 0;
+        width: 50%;
+        margin-top: 8%;
+        height: 4vh;
+        align-items:flex-end;
+    }
+    .final{
+        display: flex;
+        flex-direction: row;
+    }
+    .btnPrecio{
+        display: flex;
+        flex-direction: column;
+    }
+    .quitar{
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+}
