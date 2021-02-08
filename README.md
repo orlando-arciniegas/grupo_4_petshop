@@ -46,3 +46,7 @@ Marketing con marcas comerciales conocidas por el público.
 
 5. https://www.natural-life.com.ar/
 Diseño responsive, adaptable a distintos dispositivos.
+
+## Link a nuestro tablero de trabajo
+
+https://trello.com/b/O39veKC0/proyecto
