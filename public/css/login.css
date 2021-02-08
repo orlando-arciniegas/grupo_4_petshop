@@ -255,9 +255,9 @@ footer {
 @media (min-width: 1200px) {
     .register__box {
     max-width: 500px;
-    top: 60%;
+    top: 70%;
     }
     footer {
-    top: 100%;
+    top: 110%;
     }    
 }
