@@ -29,7 +29,7 @@ header {
     width: 100%;
 }
 #logo {
-    width: 40%;
+    width: 17%;
     margin-right: 10vw;
 }
 #cart {
@@ -75,6 +75,7 @@ header {
     border-radius: 5px;
     height: 35px;
     width: 100%;
+    outline: none;
 }
 .search-btn {
     background-color: white;
@@ -214,6 +215,7 @@ hr {
     background-color: transparent;
     font-size: 7vw;
     transition: background-color 1.5s ;
+    outline: none;
 }
 .detalles-cantidad .mas:active,
 .detalles-cantidad .menos:active {
@@ -233,6 +235,7 @@ hr {
     width: 12vw;
     height: 10vw;
     text-align: center;
+    outline: none;
 }
 .btn {
    margin-left: auto;
@@ -282,11 +285,13 @@ hr {
  }
  .newsletter {
     background-color: #F8904E;
-    color:white;
+    color:black;
     padding: 20px;
  }
+ .newsletter i {
+     color: white;
+ }
  .newsletter h4 {
-     font-weight: bold;
      text-align: center;
      font-size: 5vw;
      padding: 10px;
@@ -339,7 +344,7 @@ footer {
     margin-bottom: 20px;
 }
 .logo_redes_sociales img {
-    width: 70%;
+    width: 40%;
 }
 .logo_redes_sociales i {
     color: white;
@@ -381,7 +386,7 @@ footer section:nth-child(4){
         padding: 10px 50px;
     }
     #logo {
-        width: 25%;
+        width: 13%;
         margin: 0px;
     }
     #account {
@@ -399,7 +404,7 @@ footer section:nth-child(4){
         font-size: 3vw;
     }
     main {
-        margin-top: calc(10% + 50px);
+        margin-top: calc(10% + 70px);
     }
     hr {
     top: 2.5%;
@@ -472,7 +477,7 @@ footer section:nth-child(4){
         border: 1px solid black;
     }
     #logo {
-        width: 13%;
+        width: 7%;
         margin-right: 0px;
     }
     .burger-menu {
@@ -540,7 +545,7 @@ footer section:nth-child(4){
         color: white;
     }
     main {
-        margin-top: calc(5% + 40px);
+        margin-top: calc(5% + 60px);
     }
     hr {
         top: 35px;
