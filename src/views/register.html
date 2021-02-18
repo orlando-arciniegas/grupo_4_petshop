@@ -2,73 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets</title>
-    <link rel="stylesheet" href="./css/master.css">
-    <link rel="stylesheet" href="./css/register.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <%- include  ('partials/head.ejs') %>
+    <link rel="stylesheet" href="./css/register.css"> 
 </head>
 
 <body>
     <!------------ HEADER  ---------->
-    <header>
-        <div class="header-top">
-            <figure id="logo">
-                <a href="/">
-                    <img src="./img/logo.png" alt="logo furry">
-                </a>
-            </figure>
-
-            <div id="account">
-                <ul>
-                    <li><i class="fa fa-user-alt"></i>
-                        <ul>
-                            <li><a href="login">Iniciar sesion</a></li>
-                            <li><a href="register">Registrarse</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="cart">
-                <a href="cart">
-                    <i class="fa fa-shopping-cart"></i>
-                    <p>0</p>
-                </a>
-            </div>
-
-            <div class="burger-menu">
-                <i class="fa fa-bars"></i>
-            </div>
-
-            <form action="/" method="GET" id=buscar>
-                <input placeholder="Buscar productos, marcas" type="text" name="buscar">
-                <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
-
-        <div class="header-bottom">
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Alimentos</a></li>
-                    <li><a href="#">Juguetes</a></li>
-                    <li><a href="#">Medicamentos</a></li>
-                    <li><a href="#">Accesorios</a></li>
-                    <li><a href="#">Snacks</a></li>
-                    <li><a href="#">Belleza e higiene</a></li>
-                </ul>
-            </nav>
-            <div class="ofertas">
-                <a href="#">OFERTAS <i class="fas fa-tags"></i></a>
-            </div>
-        </div>
-    </header>
+    <%- include  ('partials/header.ejs') %>
 
     <!------------ MAIN FORM REGISTER---------->
     <main>
-   
         <section class="form__register">
            
             <div class="register__box">
@@ -121,53 +64,7 @@
     </main>
 
     <!------------ FOOTER ---------->
-    <footer>
-        <section class="logo_redes_sociales">
-            <figure>
-                <img src="./img/logo.png" alt="logo furry">
-            </figure>
-
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </section>
-
-        <section class="footer-list">
-            <h4>Categorias</h4>
-            <ul>
-                <li><a href="#">Alimentos</a></li>
-                <li><a href="#">Juguetes</a></li>
-                <li><a href="#">Medicamentos</a></li>
-                <li><a href="#">Accesorios</a></li>
-                <li><a href="#">Snacks</a></li>
-                <li><a href="#">Belleza e higiene</a></li>
-            </ul>
-        </section>
-
-        <section class="footer-list">
-            <h4>Mis compras</h4>
-            <ul>
-                <li><a href="#">Carrito</a></li>
-                <li><a href="#">Mi cuenta</a></li>
-                <li><a href="#">Terminos y condiciones</a></li>
-                <li><a href="#">Politicas de privacidad</a></li>
-                <li><a href="#">politicas de cambios</a></li>
-            </ul>
-        </section>
-
-        <section class="footer-list">
-            <h4>Contacto</h4>
-            <ul>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Locales</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </section>
-
-        <h5 class="copyright">Copyright 2021 Pets</h5>
-
-    </footer>
+    <%- include  ('partials/footer.ejs') %>
 </body>
 
 </html>
