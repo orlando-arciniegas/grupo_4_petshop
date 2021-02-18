@@ -4,7 +4,7 @@ const path = require('path');
 const router = express.Router();
 
 router.route('/')
-    .get((req, res) => res.sendFile(path.resolve(__dirname, '../views/home.html')))
+    .get((req, res) => res.render(path.resolve(__dirname, '../views/home.ejs')))
 
 router.route('/register')
     .get((req, res) => res.sendFile(path.resolve(__dirname, '../views/register.html')))
