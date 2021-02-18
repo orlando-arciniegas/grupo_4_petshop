@@ -36,7 +36,7 @@
             <div id="cart">
                 <a href="carrito">
                     <i class="fa fa-shopping-cart"></i>
-                    <p>0</p>
+                    <span>0</span>
                 </a>
             </div>
 
@@ -98,10 +98,11 @@
 
                     <div class="detalles-cantidad">
                         <button type="" class="menos">-</button>
-                        <input type="text" value="1">
+                        <input type="number" value="1" min="1" max="15">
                         <button class="mas">+</button>
 
                         <button class="btn">comprar</button>
+                        <span class="errorInput">Ingrese un valor entre 1 y 15</span>
                     </div>
                 </div>
             </article>
@@ -120,10 +121,11 @@
 
                     <div class="detalles-cantidad">
                         <button type="" class="menos">-</button>
-                        <input type="text" value="1">
+                        <input type="number" value="1" min="1" max="15">
                         <button class="mas">+</button>
 
                         <button class="btn">comprar</button>
+                        <span class="errorInput">Ingrese un valor entre 1 y 15</span>
                     </div>
                 </div>
             </article>
@@ -141,10 +143,11 @@
 
                     <div class="detalles-cantidad">
                         <button type="" class="menos">-</button>
-                        <input type="text" value="1">
+                        <input type="number" value="1" min="1" max="15">
                         <button class="mas">+</button>
 
                         <button class="btn">comprar</button>
+                        <span class="errorInput">Ingrese un valor entre 1 y 15</span>
                     </div>
                 </div>
             </article>
@@ -163,10 +166,11 @@
 
                     <div class="detalles-cantidad">
                         <button class="menos">-</button>
-                        <input type="text" value="1">
+                        <input type="number" value="1" min="1" max="15">
                         <button class="mas">+</button>
 
                         <button class="btn">comprar</button>
+                        <span class="errorInput">Ingrese un valor entre 1 y 15</span>
                     </div>
                 </div>
             </article>
@@ -183,7 +187,7 @@
 
             <article class="envio">
                 <i class="fas fa-truck truck"></i>
-                <span>ENVIOS GRATIS POR COMPRAS SUPERIORES A $ 20.000</span>
+                <span>ENVIOS GRATIS POR COMPRAS SUPERIORES A <br id="brPrecio"> $ 20.000</span>
             </article>
 
         </section>

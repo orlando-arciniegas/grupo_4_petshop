@@ -12,6 +12,28 @@ a {
 ul {
     list-style: none;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]:invalid {
+    background-color: rgb(255, 180, 180);
+}
+.errorInput {
+    display: none;
+}
+input[type=number]:invalid ~.errorInput{
+    display: block;
+    color: red;
+    margin-top: 10px;
+}
 /*------------------------ HEADER ---------------------------*/
 header {
     position: fixed;
@@ -47,7 +69,7 @@ header {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
-#cart p {
+#cart span {
     font-size: 4vw;
     position: absolute;
     top: -15px;
@@ -102,11 +124,11 @@ header {
     width: 100%;
 }
 #account ul ul li:hover {
-    background-color: #005661;
+    background-color: #F8904E;
 }
 #account ul a {
     display:block;
-    color:white;
+    color:black;
     text-decoration:none;
     font-weight:400;
     font-size:15px;
@@ -119,9 +141,9 @@ header {
     position:absolute;
     top:150%;
     left:-50%;
-    background:#00818e;
+    background:white;
     border: 1px solid black;
-    transition: transform 0.5s;
+    transition: transform 0.3s;
     opacity: 0;
  }
  #account ul:hover ul {
@@ -321,6 +343,9 @@ hr {
     display: flex;
     flex-wrap: wrap;
 }
+#brPrecio {
+    display: none;
+}
 .newsletter input[type=email] {
     border-radius: 5px;
     height: 35px;
@@ -400,7 +425,7 @@ footer section:nth-child(4){
     #cart {
         margin: 0px 30px;
     }
-    #cart p {
+    #cart span {
         font-size: 3vw;
     }
     main {
@@ -502,8 +527,11 @@ footer section:nth-child(4){
     }
     #account ul ul {
         top:100%;
-     }
-    #cart p {
+    }
+    #account ul ul {
+        transition: transform 0.5s;
+    }
+    #cart span {
         font-size: 1.3vw;
         top: -12px;
         right: -10px;
@@ -632,6 +660,9 @@ footer section:nth-child(4){
     }
     .group-checkbox i {
         font-size: 40px;
+    }
+    #brPrecio {
+        display: block;
     }
     .input-control {
         width: 60%;
