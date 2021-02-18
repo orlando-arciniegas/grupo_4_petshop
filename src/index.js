@@ -9,6 +9,10 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.listen(app.get('puerto'), ()=> console.log(`servidor corriendo en el puerto ${app.get('puerto')}` ) )
 
+app.set('view engine', 'ejs');
+
+app.set('views', './partials')
+
 // RUTAS ----------------------------------
 
 app.use('/', require('./routes/home.js'))
