@@ -17,6 +17,12 @@ router.route('/detalle')
 
     .get((req, res) => res.render(path.resolve(__dirname, '../views/productos/carrito.ejs')))
 
+router.route('/creacionProducto')
+    .get((req, res) => res.render(path.resolve(__dirname, '../views/productos/creacionProducto.ejs')))
+
+    router.route('/edicionProducto')
+    .get((req, res) => res.render(path.resolve(__dirname, '../views/productos/edicionProducto.ejs')))
+
 
 module.exports = router
 
