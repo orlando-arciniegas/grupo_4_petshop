@@ -14,13 +14,15 @@ router.route('/login')
 
 router.route('/detalle')
     .get((req, res) => res.render(path.resolve(__dirname, '../views/productos/detalle.ejs')))
-
+router.route('/carrito')
     .get((req, res) => res.render(path.resolve(__dirname, '../views/productos/carrito.ejs')))
 
 router.route('/creacionProducto')
     .get((req, res) => res.render(path.resolve(__dirname, '../views/productos/creacionProducto.ejs')))
 
-    router.route('/edicionProducto')
+    .post((req, res) => res.render(path.resolve(__dirname, '../views/productos/creacionProducto.ejs')))
+
+router.route('/edicionProducto')
     .get((req, res) => res.render(path.resolve(__dirname, '../views/productos/edicionProducto.ejs')))
 
 
