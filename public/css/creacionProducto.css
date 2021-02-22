@@ -1,16 +1,18 @@
 
 .main {
-    padding-top: 3vh;
+    padding: 3vh;
+}
+
+.contenedor{
     border-radius: 8px;
     background-color: #00818e;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     margin-right: 20%;
     margin-left: 20%;
-    margin-top: 40%;
+    margin-top: 7%;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     box-sizing: border-box;
 }
-
 
 .nuevoProducto{
     margin: auto 0;
@@ -126,15 +128,17 @@
         .barra{
             width: 40%;
         }
-        .main {
-            padding-top: 3vh;
+        .contenedor{
             border-radius: 8px;
             background-color: #00818e;
             margin-bottom: 10vh;
             margin-right: 20%;
             margin-left: 20%;
-            margin-top: 30vh;
+            margin-top: 7%;
             box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
             box-sizing: border-box;
+        }
+        .main{
+            padding: 3vh;
         }
     }

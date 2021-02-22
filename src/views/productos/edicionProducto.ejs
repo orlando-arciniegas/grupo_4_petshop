@@ -8,75 +8,77 @@
     
     <!----------MAIN---------->
    <main class="main">
-    <section class="nuevoProducto">
-        <h1 class="titulo"> Editar un Producto</h1>
-    </section>
-    <section>
-        <form class="formularioProducto" action="/" method="POST">
-            <div class="campo">
-                <strong>
-                    <label class="subtitulo" for="nombre">Nombre del producto</label>
-                </strong>
-                <input type="text" name="nombre" class="barra">
+       <div class="contenedor">
+            <section class="nuevoProducto">
+                <h1 class="titulo"> Editar un Producto</h1>
+            </section>
+            <section>
+                <form class="formularioProducto" action="/" method="POST">
+                    <div class="campo">
+                        <strong>
+                            <label class="subtitulo" for="nombre">Nombre del producto</label>
+                        </strong>
+                        <input type="text" name="nombre" class="barra">
 
-            </div>
-            <div class="campo">
-                <strong>
-                    <label class="subtitulo" for="descripcion">Descripción del Producto</label>
-                </strong>
-                <textarea name="descripcion" class="barra" required> </textarea>
+                    </div>
+                    <div class="campo">
+                        <strong>
+                            <label class="subtitulo" for="descripcion">Descripción del Producto</label>
+                        </strong>
+                        <textarea name="descripcion" class="barra" required> </textarea>
+                        
+                    </div>
+                    <div class="campo">
+                        <strong>
+                            <label class="subtitulo" for="imagen">Imagen del Producto</label>
+                        </strong>
+                    
+                        <input type="file" name="imagen" accept=".jpg">
+                        
+                    </div>
                 
-            </div>
-            <div class="campo">
-                <strong>
-                    <label class="subtitulo" for="imagen">Imagen del Producto</label>
-                </strong>
-               
-                <input class="center" type="file" name="imagen" accept=".jpg">
-                 
-            </div>
-         
-            <div class="campo">
-                <strong>
-                    <label class="subtitulo" for="categoria">Categoría</label>
-                </strong>
-                <select name="categoria">
-                    <option name="alimento">Alimento</option>
-                    <option name="bellezaHigiene">Belleza e Higiene</option>
-                    <option name="accesorios">Accesorios</option>
-                    <option name="juguetes">Juguetes</option>
-                    <option name="medicamentos">Medicamentos</option>
-                    <option name="snacks">Snacks</option>
-                </select>    
+                    <div class="campo">
+                        <strong>
+                            <label class="subtitulo" for="categoria">Categoría</label>
+                        </strong>
+                        <select name="categoria">
+                            <option name="alimento">Alimento</option>
+                            <option name="bellezaHigiene">Belleza e Higiene</option>
+                            <option name="accesorios">Accesorios</option>
+                            <option name="juguetes">Juguetes</option>
+                            <option name="medicamentos">Medicamentos</option>
+                            <option name="snacks">Snacks</option>
+                        </select>    
 
-            </div>
-                         
-            <div class="campo">
-                <strong>
-                    <label class="subtitulo" for="precio">Precio</label>
-                </strong>
-                <input type="number" name="precio" class="barra">
-            </div>
-            <div class="campo">
-                <strong>
-                    <label class="subtitulo" for="stock">Stock</label>
-                </strong>
-            </div>
-                <div class="detalles-cantidad detalleCant">
-                    <button class="btnMenos">-</button>
-                    <input class="value" type="text" value="1">
-                    <button class="btnMas">+</button>
-                </div>
+                    </div>
+                                
+                    <div class="campo">
+                        <strong>
+                            <label class="subtitulo" for="precio">Precio</label>
+                        </strong>
+                        <input type="number" name="precio" class="barra">
+                    </div>
+                    <div class="campo">
+                        <strong>
+                            <label class="subtitulo" for="stock">Stock</label>
+                        </strong>
+                    </div>
+                        <div class="detalles-cantidad detalleCant">
+                            <button class="btnMenos">-</button>
+                            <input class="value" type="text" value="1">
+                            <button class="btnMas">+</button>
+                        </div>
 
-            <div class="crearProducto">
-                <input type="reset" value="Borrar Producto" class="button">
-                <input type="submit" value="Guardar Producto" class="button">
-            </div>
+                    <div class="crearProducto">
+                        <input type="reset" value="Borrar Producto" class="btnBorrar">
+                        <input type="submit" value="Guardar Producto" class="button">
+                    </div>
 
 
-        </form>
-        
-    </section>
+                </form>
+                
+            </section>
+        </div>
 
    </main>
     
