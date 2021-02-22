@@ -1,12 +1,21 @@
 
 .main {
     padding-top: 3vh;
+    border-radius: 8px;
+    background-color: #00818e;
+    margin-bottom: 10vh;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 40%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    box-sizing: border-box;
 }
 
 
 .nuevoProducto{
     margin: auto 0;
 }
+
 
 .formularioProducto{
     padding: 4px;
@@ -22,7 +31,7 @@
 .titulo{
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #00818e;
+    color: white;
     margin-bottom: 3vh;
 }
 
@@ -31,7 +40,7 @@
     margin-bottom: 2vh;
     font-style:italic;
     display: block;
-    color: #00818e;
+    color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -62,15 +71,26 @@
     margin: auto;
     margin-bottom: 4vh;
 }
-.menos{
+.btnMenos{
     background-color: white;
+    width: 35px;
+    border: #F8904E solid;
+    border-radius: 5px;
 }
-.mas{
+.btnMas{
     background-color: white;
+    width: 35px;
+    border: #F8904E solid;
+    border-radius: 5px;
 }
-
+.value{
+    background-color: white;
+    width: 45px;
+    border: #F8904E solid;
+    border-radius: 3px;
+}
 .button{
- border:none;
+ border: solid #F8904E;
  background-color: #00818e;
  font-size: 20px;
  color:#fff;
@@ -106,7 +126,15 @@
         .barra{
             width: 40%;
         }
-    
-
-    
+        .main {
+            padding-top: 3vh;
+            border-radius: 8px;
+            background-color: #00818e;
+            margin-bottom: 10vh;
+            margin-right: 20%;
+            margin-left: 20%;
+            margin-top: 30vh;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+            box-sizing: border-box;
+        }
     }
