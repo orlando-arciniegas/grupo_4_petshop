@@ -101,25 +101,27 @@ body {
 .register__box__sesion {
     position: relative;
     display: block;
-    padding: 10px 20px;
-    color: orangered;
-    font-size: 12px;
+    padding: 8px 20px;
+    color: white;
+    font-size: 14px;
     text-decoration: none;
     overflow: hidden;
     transition: .5s;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .register__box__return {
     position: relative;
     display: inline-block;
     padding: 15px;
-    color: #ffffff;
+    color: white;
     font-size: 16px;
     text-decoration: none;
     overflow: hidden;
     transition: .5s;
     letter-spacing: 2px;
-    left: 30px;
+    left: 25%;
     margin-top: 10px;
 }
 

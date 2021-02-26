@@ -98,9 +98,9 @@ body {
 
 .register__box__sesion {
     position: relative;
-    display: block;
+    display: inline-block;
     padding: 10px 20px;
-    color: orangered;
+    color: rgb(255, 255, 255);
     font-size: 12px;
     text-decoration: none;
     overflow: hidden;
@@ -117,8 +117,7 @@ body {
     overflow: hidden;
     transition: .5s;
     letter-spacing: 2px;
-    left: 30px;
-    margin-top: 10px;
+    top: 18px;
 }
 
 .register__box button:hover {
