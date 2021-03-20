@@ -436,7 +436,7 @@ footer section:nth-child(4){
     top: 2.5%;
     }
     .productos-destacados{
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .producto-individual {
         width: 45%;

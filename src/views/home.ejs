@@ -1,174 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <!------------ HEAD  ---------->
+
 <head>
-<%- include  ('partials/head.ejs') %>
+    <%- include ('partials/head.ejs') %>
 </head>
+
 <body>
     <!------------ HEADER  ---------->
-    <%- include  ('partials/header.ejs') %>
-    <!------------ FIN HEADER  ---------->
+    <%- include ('partials/header.ejs') %>
+        <!------------ FIN HEADER  ---------->
 
-    <!------------ MAIN  ---------->
-    <main>
-        <section id="banner">
-            <figure>
-                <img src="./img/Tarjetas-Regalo-Tienda.jpeg" alt="Banner de la tienda">
-            </figure>
-        </section>
-
-        <section class="productos-destacados">
-            <div class="titulo">
-                <span>PRODUCTOS DESTACADOS</span>
-            </div>
-            <hr>
-
-            <article class="producto-individual">
+        <!------------ MAIN  ---------->
+        <main>
+            <section id="banner">
                 <figure>
-                    <a href="#">
-                        <img src="./img/Nutrecan-Adulto-Raza-Mediana-Grande.jpg"
-                            alt="Nutrecan Adulto Raza Mediana y Grande">
-                    </a>
+                    <img src="./img/Tarjetas-Regalo-Tienda.jpeg" alt="Banner de la tienda">
                 </figure>
+            </section>
 
-                <div class="detalles-producto">
-                    <a href="#"> <strong class="descripcion">Alimento Para Perro - Nutrecan Adulto Raza
-                            Med/Grande</strong></a>
-                    <p class="precio">$ 6.770</p>
-
-                    <div class="detalles-cantidad">
-                        <button type="" class="menos">-</button>
-                        <input type="number" value="1" min="1" max="15">
-                        <button class="mas">+</button>
-
-                        <button class="btn">comprar</button>
-                        <span class="errorInput">Ingrese un valor entre 1 y 15</span>
-                    </div>
+            <section class="productos-destacados">
+                <div class="titulo">
+                    <span>PRODUCTOS DESTACADOS</span>
                 </div>
-            </article>
+                <hr>
 
-            <article class="producto-individual">
-                <figure>
-                    <a href="#">
-                        <img src="./img/Antipulgas-Advantage-gatos.jpg" alt="Antipulgas Advantage para gatos">
-                    </a>
-                </figure>
+                <% for( let i=0; i < destacados.length; i++ ) { %>
+                    <article class="producto-individual">
+                        <figure>
+                            <a href="producto/<%= destacados[i].id %>" >
+                                <img src="./img/productos/<%= destacados[i].imagen %>"
+                                    alt= <%= destacados[i].nombre %>>
+                            </a>
+                        </figure>
 
-                <div class="detalles-producto">
-                    <a href="#"><strong class="descripcion">Antipulgas Advantage gatos hasta 4 kg x0.4 ml para
-                            gato</strong></a>
-                    <p class="precio">$ 2.500</p>
+                        <div class="detalles-producto">
+                            <a href="producto/<%= destacados[i].id %>" > 
+                                <strong class="descripcion"><%= destacados[i].nombre %></strong>
+                            </a>
+                            <p class="precio">$ <%= destacados[i].precio %></p>
 
-                    <div class="detalles-cantidad">
-                        <button type="" class="menos">-</button>
-                        <input type="number" value="1" min="1" max="15">
-                        <button class="mas">+</button>
+                            <div class="detalles-cantidad">
+                                <button type="" class="menos">-</button>
+                                <input type="number" value="1" min="1" max="15">
+                                <button class="mas">+</button>
 
-                        <button class="btn">comprar</button>
-                        <span class="errorInput">Ingrese un valor entre 1 y 15</span>
+                                <button class="btn">comprar</button>
+                                <span class="errorInput">Ingrese un valor entre 1 y 15</span>
+                            </div>
+                        </div>
+                    </article>
+                <% } %>
+                        
+            </section>
+
+            <section class="pago-envio">
+                <article class="pago">
+                    <span>MÉTODOS DE PAGO</span>
+                    <figure>
+                        <img src="./img/Medios-Pago1.jpg" alt="medios de pago aceptados">
+                    </figure>
+                </article>
+
+                <article class="envio">
+                    <i class="fas fa-truck truck"></i>
+                    <span>ENVIOS GRATIS POR COMPRAS SUPERIORES A <br id="brPrecio"> $ 20.000</span>
+                </article>
+
+            </section>
+
+            <section class="newsletter">
+                <h4>¡Suscríbete al Newsletter y obtén 10% de descuento en tu primera compra!</h4>
+
+                <form action="#" method="GET">
+
+                    <div class="group-checkbox">
+                        <p>¿Qué mascota tienes?</p>
+                        <div>
+                            <label for="perro"><i class="fas fa-dog"></i></label>
+                            <input type="checkbox" name="intereses" id="perro" value="perro">
+                        </div>
+                        <div>
+                            <label for="gato"><i class="fas fa-cat"></i></label>
+                            <input type="checkbox" name="intereses" id="gato" value="gato">
+                        </div>
+                        <div>
+                            <label for="aves"><i class="fas fa-duck"></i></label>
+                            <input type="checkbox" name="intereses" id="aves" value="aves">
+                        </div>
+                        <div>
+                            <label for="roedores"><i class="fas fa-rabbit"></i></label>
+                            <input type="checkbox" name="intereses" id="roedores" value="roedores">
+                        </div>
                     </div>
-                </div>
-            </article>
-
-            <article class="producto-individual">
-                <figure>
-                    <a href="detalle">
-                        <img src="./img/Bebedero-Azul.jpg" alt="Bebedero azul">
-                    </a>
-                </figure>
-
-                <div class="detalles-producto">
-                    <a href="detalle"><strong class="descripcion">Bebedero color azul para mascotas</strong></a>
-                    <p class="precio">$ 3.500</p>
-
-                    <div class="detalles-cantidad">
-                        <button type="" class="menos">-</button>
-                        <input type="number" value="1" min="1" max="15">
-                        <button class="mas">+</button>
-
-                        <button class="btn">comprar</button>
-                        <span class="errorInput">Ingrese un valor entre 1 y 15</span>
+                    <div class="input-control">
+                        <input type="email" name="correo" placeholder="Ingresa tu Email" required>
+                        <button class="btn" type="submit">ENVIAR</button>
                     </div>
-                </div>
-            </article>
 
-            <article class="producto-individual">
-                <figure>
-                    <a href="#">
-                        <img src="./img/Kinky-Collar-Negro-Camo-Verde-Huesos-1.jpg"
-                            alt="Kinky Collar Negro Camo Verde Huesos">
-                    </a>
-                </figure>
+                </form>
+            </section>
+        </main>
+        <!------------ FIN MAIN ---------->
 
-                <div class="detalles-producto">
-                    <a href="#"><strong class="descripcion">Kinky Collar Negro Camo Verde Huesos</strong></a>
-                    <p class="precio">$ 1.650</p>
-
-                    <div class="detalles-cantidad">
-                        <button class="menos">-</button>
-                        <input type="number" value="1" min="1" max="15">
-                        <button class="mas">+</button>
-
-                        <button class="btn">comprar</button>
-                        <span class="errorInput">Ingrese un valor entre 1 y 15</span>
-                    </div>
-                </div>
-            </article>
-
-        </section>
-
-        <section class="pago-envio">
-            <article class="pago">
-                <span>MÉTODOS DE PAGO</span>
-                <figure>
-                    <img src="./img/Medios-Pago1.jpg" alt="medios de pago aceptados">
-                </figure>
-            </article>
-
-            <article class="envio">
-                <i class="fas fa-truck truck"></i>
-                <span>ENVIOS GRATIS POR COMPRAS SUPERIORES A <br id="brPrecio"> $ 20.000</span>
-            </article>
-
-        </section>
-
-        <section class="newsletter">
-            <h4>¡Suscríbete al Newsletter y obtén 10% de descuento en tu primera compra!</h4>
-
-            <form action="#" method="GET">
-
-                <div class="group-checkbox">
-                    <p>¿Qué mascota tienes?</p>
-                    <div>
-                        <label for="perro"><i class="fas fa-dog"></i></label>
-                        <input type="checkbox" name="intereses" id="perro" value="perro">
-                    </div>
-                    <div>
-                        <label for="gato"><i class="fas fa-cat"></i></label>
-                        <input type="checkbox" name="intereses" id="gato" value="gato">
-                    </div>
-                    <div>
-                        <label for="aves"><i class="fas fa-duck"></i></label>
-                        <input type="checkbox" name="intereses" id="aves" value="aves">
-                    </div>
-                    <div>
-                        <label for="roedores"><i class="fas fa-rabbit"></i></label>
-                        <input type="checkbox" name="intereses" id="roedores" value="roedores">
-                    </div>
-                </div>
-                <div class="input-control">
-                    <input type="email" name="correo" placeholder="Ingresa tu Email" required>
-                    <button class="btn" type="submit">ENVIAR</button>
-                </div>
-
-            </form>
-        </section>
-    </main>
-    <!------------ FIN MAIN ---------->
-
-    <!------------ FOOTER ---------->
-    <%- include  ('partials/footer.ejs') %>
-    <!------------ FIN FOOTER ---------->
+        <!------------ FOOTER ---------->
+        <%- include ('partials/footer.ejs') %>
+            <!------------ FIN FOOTER ---------->
 
 </body>
 

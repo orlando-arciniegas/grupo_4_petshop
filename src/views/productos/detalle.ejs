@@ -13,12 +13,12 @@
     <!-- MAIN -->
     <main class="main">
         <figure class="figure">
-            <img class="imgProd" src="/img/Bebedero-Azul.jpg" alt="Producto">
-            <img class="miniProd" src="/img/Bebedero-Azul.jpg" alt="mini producto">
+            <img class="imgProd" src="/img/productos/<%= producto.imagen %> " alt="<%= producto.nombre %>">
+            <img class="miniProd" src="/img/productos/<%= producto.imagen %> " alt="mini <%= producto.nombre %>">
         </figure>
         <div class="detProd">
-            <h2 class="detalle">Bebedero color azul para mascotas.</h2>
-            <h2 class="precioProd">$ 3.500</h2>
+            <h2 class="detalle"><%= producto.nombre %>.</h2>
+            <h2 class="precioProd">$ <%= producto.precio %></h2>
         </div>
         <div class="agregar">
             <button class="button" type="submit">AGREGAR AL CARRITO</button>
