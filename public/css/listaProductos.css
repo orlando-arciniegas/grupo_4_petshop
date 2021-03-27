@@ -1,0 +1,66 @@
+.lista-productos {
+    padding: 40px 20px;
+    margin: auto;
+}
+.lista-titulo {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+
+.btn .icon {
+    padding-left: 10px;
+}
+a.btn {
+    width: 40%;
+    margin: auto;
+    margin-top: 10px;
+}
+table a.btn {
+    width: auto;
+}
+.block {
+    padding: 10px;
+    display: block;
+}
+.table {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+}
+.table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: auto;
+
+}
+th, td {
+    padding: 5px;
+}
+table tr td:nth-child(n+2):nth-child(-n+4),
+table tr th:nth-child(n+2):nth-child(-n+4) {
+   display: none;
+}
+.option-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+@media (min-width:600px) {
+    table tr td:nth-child(n+2):nth-child(-n+4),
+    table tr th:nth-child(n+2):nth-child(-n+4) {
+        display: table-cell;
+    }
+    a.btn {
+        max-width: 150px;
+    }
+}
+
+@media (min-width:992px) { 
+    .table, th, td {
+        width: 70%;
+    }
+}

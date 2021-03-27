@@ -163,7 +163,7 @@ header {
 /*------------------------  MAIN ---------------------------*/
 main {
     background-color: rgb(241, 241, 241);
-    margin-top: calc(15% + 70px);
+    margin-top: calc(15% + 74px);
 }
 .productos-destacados {
     width: 90%;
@@ -262,6 +262,7 @@ hr {
 }
 .btn {
    margin-left: auto;
+   padding: 5px;
    width: 45%;
    background-color: #00818e;
    color: white;
@@ -430,7 +431,7 @@ footer section:nth-child(4){
         font-size: 3vw;
     }
     main {
-        margin-top: calc(10% + 70px);
+        margin-top: calc(11% + 70px);
     }
     hr {
     top: 2.5%;
@@ -455,7 +456,7 @@ footer section:nth-child(4){
         height: 5vw;
     }
     .btn {
-        font-size: 2.5vw;
+        font-size: 1.8vw;
     }
     .pago-envio .pago span {
         font-size: 5vw;
@@ -574,7 +575,7 @@ footer section:nth-child(4){
         color: white;
     }
     main {
-        margin-top: calc(5% + 60px);
+        margin-top: calc(7% + 60px);
     }
     hr {
         top: 35px;

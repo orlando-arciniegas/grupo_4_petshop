@@ -2,12 +2,13 @@ const productController = {};
 const dbProducto = require("../data/models/Producto.js");
 
 productController.index = (req,res) => {
-    return console.log("index");
+    const productos = dbProducto.findAll();
+    return res.render("productos/listaProductos", {productos})
 }
 
 productController.show = (req,res) => {
-    producto = dbProducto.findById(req.params.id)
-    return res.render("productos/detalle", {producto: producto })
+    const producto = dbProducto.findById(req.params.id)
+    return res.render("productos/detalle", {producto})
 }
 
 productController.create = (req,res) => {

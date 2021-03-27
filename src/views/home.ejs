@@ -28,14 +28,14 @@
                 <% for( let i=0; i < destacados.length; i++ ) { %>
                     <article class="producto-individual">
                         <figure>
-                            <a href="producto/<%= destacados[i].id %>" >
+                            <a href="producto/detalle/<%= destacados[i].id %>" >
                                 <img src="./img/productos/<%= destacados[i].imagen %>"
                                     alt= <%= destacados[i].nombre %>>
                             </a>
                         </figure>
 
                         <div class="detalles-producto">
-                            <a href="producto/<%= destacados[i].id %>" > 
+                            <a href="producto/detalle/<%= destacados[i].id %>" > 
                                 <strong class="descripcion"><%= destacados[i].nombre %></strong>
                             </a>
                             <p class="precio">$ <%= destacados[i].precio %></p>

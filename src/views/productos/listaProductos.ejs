@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!------------ HEAD  ---------->
+    <%- include ('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/listaProductos.css">
+        <title>Lista productos | Pets</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <%- include ('../partials/header.ejs') %>
+        <main>
+            <section class="lista-productos">
+                <article class="lista-titulo">
+                    <h2>Lista de Productos</h2>
+                    <a href="/producto/crear" class="btn block">Nuevo <i class="fa fa-plus icon"></i></a>
+                </article>
+
+                <article class="tabla-productos">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Categoria</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(let i=0; i<productos.length ; i++) { %>
+                                <tr>
+                                    <td>
+                                        <%= productos[i].nombre %>
+                                    </td>
+                                    <td>
+                                        <%= productos[i].categoria %>
+                                    </td>
+                                    <td>$<%= new Intl.NumberFormat('en-US').format(productos[i].precio) %></td>
+                                    <td>
+                                        <%= productos[i].stock %>
+                                    </td>
+                                    <td>
+                                        <div class="option-buttons">
+                                            <a href="/producto/editar/<%= productos[i].id %>" class="btn" title="Editar">
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                            <a href="/producto/crear" class="btn"> <i class="fa fa-trash" title="Eliminar"></i></a>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <% } %>
+                        </tbody>
+                    </table>
+
+                </article>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <%- include ('../partials/footer.ejs') %>
+
+</body>
+
+</html>
