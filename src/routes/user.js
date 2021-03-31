@@ -12,6 +12,8 @@ router.route('/register')
 router.route('/login')
     .get(userController.login)
 
+router.route('/admin')
+    .get(userController.admin)
 
 module.exports = router
 

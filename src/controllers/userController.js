@@ -1,15 +1,17 @@
-const userController = {};
+const userController = {
 
-userController.index = (req,res) => {
+    index: (req, res) => {
 
-}
-
-userController.register = (req,res) => {
-    return res.render("usuarios/register")
-}
-
-userController.login = (req,res) => {
-    return res.render("usuarios/login")
+    },
+    register: (req, res) => {
+        return res.render("usuarios/register")
+    },
+    login: (req, res) => {
+        return res.render("usuarios/login")
+    },
+    admin: (req, res) => {
+        return res.send('Soy Admin')
+    }
 }
 
 module.exports = userController;

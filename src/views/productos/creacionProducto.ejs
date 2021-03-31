@@ -13,8 +13,8 @@
                 <h1 class="titulo"> Ingrese un Nuevo Producto</h1>
             </section>
             <section>
-                <form class="formularioProducto" action="/producto/crear" method="POST">
-                    <div class="campo">
+                <form class="formularioProducto" action="/producto/crear" method="POST" enctype="multipart/form-data">
+                  <div class="campo">
                         <strong>
                             <label class="subtitulo" for="nombre">Nombre del producto</label>
                         </strong>
@@ -28,14 +28,7 @@
                         <textarea name="descripcion" class="barra" required> </textarea>
                         
                     </div>
-                    <div class="campo">
-                        <strong>
-                            <label class="subtitulo" for="imagen">Imagen del Producto</label>
-                        </strong>
                     
-                        <input class="center" type="file" name="imagen" accept=".jpg">
-                        
-                    </div>
                 
                     <div class="campo">
                         <strong>
@@ -64,11 +57,19 @@
                         </strong>
                     </div>
                         <div class="detalles-cantidad detalleCant">
-                            <button type="" class="btnMenos">-</button>
-                            <input class="value" type="text" value="1">
+                            <button type="" class="btnMenos">-</button><input class="value" type="number" value="1" name="stock">
+                            
                             <button class="btnMas">+</button>
                         </div>
-
+                    
+                    <div class="campo">
+                        <strong>
+                            <label class="subtitulo" for="imagen">Imagen del Producto</label>
+                        </strong>
+                    
+                        <input class="center" type="file" name="imagen" accept=".jpg" id="imagen">
+                        
+                    </div>
                     <div class="crearProducto">
                         <input type="submit" value="Ingresar Producto" class="button">
                     </div>
