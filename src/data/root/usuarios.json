@@ -6,7 +6,7 @@
         "last_name":"Fechnie",
         "email":"gfechnie0@tumblr.com",
         "password":"I5IvbjM",
-        "category":"user",
+        "rol":1,
         "image":"user_1.jpg"
     },
     {
@@ -15,7 +15,7 @@
         "last_name":"Inskipp",
         "email":"minskipp1@cyberchimps.com",
         "password":"hxQTLMLTXj",
-        "category":"user",
+        "rol":1,
         "image":"user_2.jpg"
     },
     {
@@ -24,7 +24,7 @@
         "last_name":"Lunnon",
         "email":"hlunnon2@etsy.com",
         "password":"FSc4tjFur2",
-        "category":"user",
+        "rol":1,
         "image":"user_3.jpg"
     },
     {
@@ -33,7 +33,7 @@
         "last_name":"Casella",
         "email":"mcasella3@dropbox.com",
         "password":"ZC53r9",
-        "category":"user",
+        "rol":1,
         "image":"user_4.jpg"
     },
     {
@@ -42,7 +42,7 @@
         "last_name":"Surphliss",
         "email":"jsurphliss4@mozilla.com",
         "password":"hhdZk6gOyg",
-        "category":"user",
+        "rol":1,
         "image":"user_5.jpg"
     },
     {
@@ -51,7 +51,7 @@
         "last_name":"Druhan",
         "email":"wdruhan5@accuweather.com",
         "password":"mCAKNTrx",
-        "category":"user",
+        "rol":1,
         "image":"user_6.jpg"
     },
     {
@@ -60,7 +60,7 @@
         "last_name":"Sepey",
         "email":"msepey6@dailymail.co.uk",
         "password":"xO21qo4e",
-        "category":"user",
+        "rol":1,
         "image":"user_7.jpg"
     },
     {
@@ -69,7 +69,7 @@
         "last_name":"Meier",
         "email":"hmeier7@soup.io",
         "password":"k08vF8KdfKr9",
-        "category":"user",
+        "rol":1,
         "image":"user_8.jpg"
     },
     {
@@ -78,7 +78,7 @@
         "last_name":"Shernock",
         "email":"nshernock8@adobe.com",
         "password":"4x6HaX",
-        "category":"user",
+        "rol":1,
         "image":"user_9.jpg"
     },
     {
@@ -87,7 +87,7 @@
         "last_name":"Subhan",
         "email":"gsubhan9@bigcartel.com",
         "password":"EKhe9xOkxnW2",
-        "category":"user",
+        "rol":1,
         "image":"user_10.jpg"
     },
     {
@@ -96,7 +96,7 @@
         "last_name":"Eyckelbeck",
         "email":"seyckelbecka@imgur.com",
         "password":"jb5l6Oaek",
-        "category":"user",
+        "rol":1,
         "image":"user_11.jpg"
     },
     {
@@ -105,7 +105,7 @@
         "last_name":"Hazel",
         "email":"lhazelb@gmpg.org",
         "password":"pU0RNlN",
-        "category":"user",
+        "rol":1,
         "image":"user_12.jpg"
     },
     {
@@ -114,7 +114,7 @@
         "last_name":"Pick",
         "email":"mpickc@amazon.co.uk",
         "password":"G3aKH3d",
-        "category":"user",
+        "rol":1,
         "image":"user_13.jpg"
     },
     {
@@ -123,7 +123,7 @@
         "last_name":"Annesley",
         "email":"cannesleyd@si.edu",
         "password":"7IxQiF",
-        "category":"user",
+        "rol":1,
         "image":"user_14.jpg"
     },
     {
@@ -132,7 +132,7 @@
         "last_name":"Fontes",
         "email":"vfontese@state.tx.us",
         "password":"Qxhkid8627",
-        "category":"user",
+        "rol":1,
         "image":"user_15.jpg"
     },
     {
@@ -141,7 +141,7 @@
         "last_name":"Renvoys",
         "email":"frenvoysf@webmd.com",
         "password":"xz2KGQRqv7",
-        "category":"user",
+        "rol":1,
         "image":"user_16.jpg"
     },
     {
@@ -150,7 +150,7 @@
         "last_name":"Sivess",
         "email":"jsivessg@mediafire.com",
         "password":"JvI7nzOxUpTj",
-        "category":"user",
+        "rol":1,
         "image":"user_17.jpg"
     },
     {
@@ -159,7 +159,7 @@
         "last_name":"Please",
         "email":"cpleaseh@skyrock.com",
         "password":"pH4G0K",
-        "category":"user",
+        "rol":1,
         "image":"user_18.jpg"
     },
     {
@@ -168,7 +168,7 @@
         "last_name":"Bonhome",
         "email":"ebonhomei@sfgate.com",
         "password":"TTUdfR6wfGGg",
-        "category":"user",
+        "rol":1,
         "image":"user_19.jpg"
     },
     {
@@ -177,7 +177,7 @@
         "last_name":"Innocent",
         "email":"ginnocentj@hostgator.com",
         "password":"Z8mbW0",
-        "category":"user",
+        "rol":1,
         "image":"user_20.jpg"
     }
 

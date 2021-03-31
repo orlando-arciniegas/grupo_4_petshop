@@ -1,3 +1,4 @@
+const { json } = require("express");
 const fs = require("fs");
 const path = require("path");
 
@@ -12,7 +13,14 @@ const Usuario = {
         const userId = Usuario.findAll().find( (user) => user.id == id)
     
         return userId
-    }
+    },
+    create:  (list) =>{
+        const file = path.resolve(__dirname,"../usuarios.json")
+        const data = JSON.stringify(list, null, ' ')
+        fs.writeFileSync(file,data,"utf-8")
+    
+        return "ok"
+    },
 };
 
 

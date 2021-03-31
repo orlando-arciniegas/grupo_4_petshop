@@ -1,26 +1,17 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0;
-    padding: 0;
-    font-family: roboto, sans-serif;
     background-color: rgb(196, 196, 196);
     font-weight: 400;
 }
 
+.form__register {
+    padding: 40px 0px;
+}
+
 .register__box {
-    position: absolute;
-    top: 90%;
-    left: 50%;
     width: 80%;
+    margin: auto;
     padding: 40px;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-    transform: translate(-50%, -50%);
     background: #00818e;
-    box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     border-radius: 10px;
     opacity: 0.8;
@@ -125,7 +116,26 @@ body {
     margin-top: 10px;
 }
 
-.register__box button:hover {
+.btn_imagen {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.label_imagen {
+    padding: 10px 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#fileName {
+    font-size: 12px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.register__box button:hover,
+.btn_imagen label:hover {
     background: orangered;
     color: #fff;
     border-radius: 5px;
@@ -147,6 +157,14 @@ body {
     height: 2px;
     background: linear-gradient(90deg, transparent, orangered);
     animation: btn-anim1 1s linear infinite;
+}
+.hidden {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
 
 @keyframes btn-anim1 {
@@ -237,14 +255,6 @@ body {
     margin-top: 0px;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    top: 160%;
-    height: max-content;
-}
-
 @media (min-width: 766px) {
     .register__box {
         max-width: 500px;
@@ -253,6 +263,11 @@ footer {
 
     footer {
         top: 70%;
+    }
+
+    .btn_imagen {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
