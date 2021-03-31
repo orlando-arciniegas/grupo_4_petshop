@@ -2,18 +2,22 @@
 <html lang="en">
 <%- include('../partials/head.ejs') %>
 <link rel="stylesheet" href="/css/edicionProducto.css">
+
 <body>
     <!----------HEADER---------->
     <%- include('../partials/header.ejs') %>
-    
+
     <!----------MAIN---------->
-   <main class="main">
-       <div class="contenedor">
+    <main class="main">
+        <div class="contenedor">
             <section class="nuevoProducto">
                 <h1 class="titulo"> Editar un Producto</h1>
             </section>
             <section>
-                <form class="formularioProducto" action="/" method="POST">
+             
+                    <% productos.forEach(producto => { %>    
+                <form action="/producto/editar/<%= producto.id%>?_method=PUT" method="POST"
+                    enctype="multipart/form-data"><% }); %>
                     <div class="campo">
                         <strong>
                             <label class="subtitulo" for="nombre">Nombre del producto</label>
@@ -26,17 +30,17 @@
                             <label class="subtitulo" for="descripcion">Descripción del Producto</label>
                         </strong>
                         <textarea name="descripcion" class="barra" required> </textarea>
-                        
+
                     </div>
                     <div class="campo">
                         <strong>
                             <label class="subtitulo" for="imagen">Imagen del Producto</label>
                         </strong>
-                    
+
                         <input type="file" name="imagen" accept=".jpg">
-                        
+
                     </div>
-                
+
                     <div class="campo">
                         <strong>
                             <label class="subtitulo" for="categoria">Categoría</label>
@@ -48,10 +52,10 @@
                             <option name="juguetes">Juguetes</option>
                             <option name="medicamentos">Medicamentos</option>
                             <option name="snacks">Snacks</option>
-                        </select>    
+                        </select>
 
                     </div>
-                                
+
                     <div class="campo">
                         <strong>
                             <label class="subtitulo" for="precio">Precio</label>
@@ -63,27 +67,28 @@
                             <label class="subtitulo" for="stock">Stock</label>
                         </strong>
                     </div>
-                        <div class="detalles-cantidad detalleCant">
-                            <button class="btnMenos">-</button>
-                            <input class="value" type="text" value="1">
-                            <button class="btnMas">+</button>
-                        </div>
+                    <div class="detalles-cantidad detalleCant">
+                        <button class="btnMenos">-</button>
+                        <input class="value" type="number" value="1" name="stock">
+                        <button class="btnMas">+</button>
+                    </div>
 
                     <div class="crearProducto">
                         <input type="reset" value="Borrar Producto" class="btnBorrar">
                         <input type="submit" value="Guardar Producto" class="button">
                     </div>
-
+                    <div>
 
                 </form>
-                
+
             </section>
         </div>
 
-   </main>
-    
+    </main>
+
     <!----------FOOTER---------->
     <%- include('../partials/footer.ejs') %>
-    
+
 </body>
+
 </html>

@@ -32,9 +32,8 @@ table a.btn {
 }
 .table, th, td {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     width: auto;
-
 }
 th, td {
     padding: 5px;
