@@ -1,21 +1,41 @@
 const bycrypt = require('bcryptjs');
 const dbUsuarios = require('../data/models/Usuario');
+const {validationResult} = require('express-validator');
 const userController = {
 
     index: (req, res) => {
 
     },
-
     register: (req, res) => {
         return res.render("usuarios/register")
     },
-
     save: (req, res) => {
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0){
+            return res.render("usuarios/register", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        }
+        const userInDb = dbUsuarios.findByField('email', req.body.email);
+        
+        if(userInDb){
+            return res.render("usuarios/register", {
+                errors: {
+                    email: {
+                        msg: 'Este email ya esta registrado.'
+                    }
+                },
+                oldData: req.body
+            })
+        }
+    
         let listUser = dbUsuarios.findAll();
         let newUser = {};
         let id = 1
         let imagen = null;
-
+        
         if (listUser.length > 0) {
             id = listUser[listUser.length - 1].id + 1;
         }
@@ -35,16 +55,36 @@ const userController = {
 
         dbUsuarios.create(listUser)
 
-        return res.redirect("/")
-
+        let userCreated = newUser
+        
+        res.redirect('/usuario/login')
     },
-
     login: (req, res) => {
         return res.render("usuarios/login")
     },
+    loginProcess: (req, res) => {
+       let userLogin = dbUsuarios.findByField('email', req.body.email);
 
-    admin: (req, res) => {
-        return res.send('Soy Admin')
+       if (userLogin) {
+           let syncPassword = bycrypt.compareSync(req.body.password, userLogin.password)
+            if (syncPassword) {
+                return res.send('Ingresaste exitosamente.')
+            }
+        return res.render("usuarios/login", {
+            errors: {
+                password:{
+                    msg: 'Las credenciales son invalidas.'
+                    }
+                }
+            });
+        }   
+        return res.render("usuarios/login", {
+           errors: {
+               email:{
+                   msg: 'Este email no se encuentra registrado.'
+               }
+           }
+       })
     }
 }
 

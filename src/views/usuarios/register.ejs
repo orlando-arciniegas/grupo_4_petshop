@@ -14,30 +14,43 @@
 
         <!------------ MAIN FORM REGISTER---------->
         <main>
+            
             <section class="form__register">
 
                 <div class="register__box">
                     <h2>!Registraté aca!</h2>
-
+                    
                     <form action="/usuario/register" method="POST" id="registrar" enctype="multipart/form-data">
                         <div class="user-box">
-                            <input type="text" name="first_name" required="">
+                            <input type="text" name="first_name" class="form-control is-invalid" value="<%= locals.oldData ? oldData.first_name : null  %>">
                             <label>Nombres</label>
+                            <% if (locals.errors && errors.first_name) { %>
+                             <p class="validationMsg"><%= errors.first_name.msg %></p>
+                            <% } %>
                         </div>
                         <div class="user-box">
-                            <input type="text" name="last_name" required="">
+                            <input type="text" name="last_name" class="form-control is-invalid" value="<%= locals.oldData ? oldData.last_name : null  %>">
                             <label>Apellidos</label>
+                            <% if (locals.errors && errors.last_name) { %>
+                                <p class="validationMsg"><%= errors.last_name.msg %></p>
+                            <% } %>
                         </div>
                         <div class="user-box">
-                            <input type="email" name="email" required="">
+                            <input type="text" name="email" class="form-control is-invalid" value="<%= locals.oldData ? oldData.email : null  %>">
                             <label>Email</label>
+                            <% if (locals.errors && errors.email) { %>
+                                <p class="validationMsg"><%= errors.email.msg %></p>
+                            <% } %>
                         </div>
                         <div class="user-box">
-                            <input type="password" name="password" required="">
+                            <input type="password" name="password" class="form-control is-invalid">
                             <label>Contraseña</label>
+                            <% if (locals.errors && errors.password) { %>
+                                <p class="validationMsg"><%= errors.password.msg %></p>
+                            <% } %>
                         </div>
                         <div class="user-box">
-                            <input type="password" name="" required="">
+                            <input type="password" name="">
                             <label>Repetir contraseña</label>
                         </div>
                         <div class="btn_imagen">
@@ -46,11 +59,15 @@
                                 <span>Cargar imagen de perfil</span>
                             </label>
                             <input type="file" name="imagen" id="imagen" class="hidden" accept="image/*">
-                            <p id="fileName">No ha cargado ningun archivo</p>
+                            <p id="fileName">No ha cargado ningun archivo</p>  
                         </div>
-
-                        <label for="" class="tyc">Aceptó los T&C <input type="checkbox" name="" id="" required></label>
-
+                        <% if (locals.errors && errors.imagen) { %>
+                            <p class="validationMsg"><%= errors.imagen.msg %></p>
+                           <% } %>
+                        <label for="" class="tyc">Aceptó los T&C <input type="checkbox" name="tyc" id=""></label>
+                        <% if (locals.errors && errors.tyc) { %>
+                            <p class="validationMsg"><%= errors.tyc.msg %></p>
+                           <% } %>
                         <a href="/usuario/login" class="register__box__sesion">¿Ya estas registrado? Inicia sesion.</a>
 
                         <button type="submit" form="registrar" value="Submit" class="register__box__a">

@@ -3,6 +3,11 @@ const path = require("path");
 const app = express();
 const methodOverride = require('method-override');
 
+//Aqui requiero los paquetes para trabajar lo referido a session y cookies
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const authUser = require("./middlewares/authUser.js");
+
 app.set('puerto', process.env.PORT || 3000);
 
 app.use(express.urlencoded({extended:false}))
@@ -16,6 +21,18 @@ app.listen(app.get('puerto'), ()=> console.log(`servidor corriendo en el puerto 
 app.set('view engine', 'ejs'); 
 
 app.set('views', path.join(__dirname, './views'))
+
+app.use(session({
+    secret : 'topSecret',
+    resave: true,
+    saveUninitialized: true,
+}))
+
+//Aqui coloco el Middleware para activar lo referido a las cookies
+app.use(cookieParser());
+
+//Middleware de aplicación que se encarga de controlar si el usuario está logueado o no.
+//app.use(authUser);
 
 //------------- ROUTES -------------//
 

@@ -280,3 +280,14 @@ body {
     top: 150%;
     }    
 }
+
+/* FALTA AGREGAR ESTILOS AL PARRAFO QUE MUESTRA LOS ERRORES EN EL FORMULARIO */
+.validationMsg{
+   text-align: center;
+    color: red;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+} 
+

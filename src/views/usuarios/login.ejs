@@ -20,14 +20,20 @@
             <div class="register__box">
                 <h2>Iniciar sesión <i class="fad fa-sign-in-alt"></i></h2>
                 
-                <form action="/" method="POST" id="registrar">
+                <form action="/usuario/login" method="POST" id="login">
                     <div class="user-box">
-                        <input type="text" name="" required="">
-                        <label>Nombre de usuario</label>
+                        <input type="text" name="email" required="">
+                        <label>Email de usuario</label>
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="validationMsg"><%= errors.email.msg %></p>
+                        <% } %>
                     </div>
                     <div class="user-box">
-                        <input type="password" name="" required="">
+                        <input type="password" name="password" required="">
                         <label>Contraseña</label>
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="validationMsg"><%= errors.password.msg %></p>
+                        <% } %>
                     </div>
                     <label for="" class="tyc">Recuerdame <input type="checkbox" name="" id=""></label>
                     
@@ -35,7 +41,7 @@
                     <a href="/register" class="register__box__sesion">¿No tienes cuenta?
                             <br><br>Registraté</a>
             
-                    <button type="submit" form="registrar" value="Submit" class="register__box__a">
+                    <button type="submit" form="login" value="Submit" class="register__box__a">
                         <span></span>
                         <span></span>
                         <span></span>

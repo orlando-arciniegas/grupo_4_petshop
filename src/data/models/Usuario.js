@@ -11,15 +11,18 @@ const Usuario = {
     },
     findById: (id) =>{
         const userId = Usuario.findAll().find( (user) => user.id == id)
-    
         return userId
+    },
+    findByField: function(field, text){
+        allUsers = this.findAll();
+        const userFound =  allUsers.find(user => user[field] === text)
+        return userFound
     },
     create:  (list) =>{
         const file = path.resolve(__dirname,"../usuarios.json")
         const data = JSON.stringify(list, null, ' ')
         fs.writeFileSync(file,data,"utf-8")
-    
-        return "ok"
+        return true
     },
 };
 
