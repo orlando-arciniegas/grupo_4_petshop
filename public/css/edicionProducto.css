@@ -127,6 +127,42 @@
     margin-top: 3vh;
 }
 
+.hidden {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.btn_imagen {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.label_imagen {
+    padding: 10px 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#fileName {
+    font-size: 12px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.btn_imagen label:hover {
+    background: orangered;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px orangered,
+        0 0 25px orangered,
+        0 0 50px orangered,
+        0 0 100px orangered;
+}
 
 
 @media (min-width: 481px) {

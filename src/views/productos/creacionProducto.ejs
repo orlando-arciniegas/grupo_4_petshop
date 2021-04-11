@@ -62,14 +62,14 @@
                             <button class="btnMas">+</button>
                         </div>
                     
-                    <div class="campo">
-                        <strong>
-                            <label class="subtitulo" for="imagen">Imagen del Producto</label>
-                        </strong>
-                    
-                        <input class="center" type="file" name="imagen" accept=".jpg" id="imagen">
-                        
-                    </div>
+                        <div class="btn_imagen" style="margin-top: 5%;">
+                            <label for="imagen" class="label_imagen">
+                                <i class="fa fa-upload" aria-hidden="true"></i>
+                                <span>Cargar imagen del producto</span>
+                            </label>
+                            <input type="file" name="imagen" id="imagen" class="hidden" accept="image/*">
+                            <p id="fileName">No ha cargado ningun archivo</p>  
+                        </div>
                     <div class="crearProducto">
                         <input type="submit" value="Ingresar Producto" class="button">
                     </div>
