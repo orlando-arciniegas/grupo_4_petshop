@@ -1,3 +1,4 @@
+
 .main {
     padding: 3vh;
 }
@@ -13,7 +14,10 @@
     box-sizing: border-box;
 }
 
-
+.form{
+    margin: auto;
+    text-align: center;
+}
 
 
 .nuevoProducto{
@@ -24,6 +28,7 @@
     padding: 4px;
     margin: auto 0;
     text-align: center;
+    margin: auto;
     
 }
 
@@ -40,6 +45,7 @@
 
 .subtitulo{
     margin-top: 3vh;
+    text-align: center;
     margin-bottom: 2vh;
     font-style:italic;
     display: block;

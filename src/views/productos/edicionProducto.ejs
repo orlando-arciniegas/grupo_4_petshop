@@ -12,7 +12,7 @@
             <section class="nuevoProducto">
                 <h1 class="titulo"> Editar un Producto</h1>
             </section>
-            <section>
+            <section class="form">
                     <% productos.forEach(producto => { %>    
                 <form action="/producto/editar/<%= producto.id%>?_method=PUT" method="POST"
                     enctype="multipart/form-data"><% }); %>
