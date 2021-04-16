@@ -3,6 +3,11 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path')
 
+//Requerir modelo de la base de datos
+//const dataBase = require("../database/models");
+//const sequelize = db.sequelize;
+//const Op = db.Sequelize.Op;
+
 const productController = {
     index: (req,res) => {
     const productos = dbProducto.findAll();
@@ -68,7 +73,12 @@ const productController = {
         let productoSave = JSON.stringify(productoFinal,null,2)
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'),productoSave);
         res.redirect('/producto')
-    }
+    },
+  /*  list: (req, res) => {
+        dataBase.Product.findAll()
+        const productos = dbProducto.findAll();
+        return res.render("productos/listaProductos", {productos})
+    }*/
 }   
 
 module.exports = productController;

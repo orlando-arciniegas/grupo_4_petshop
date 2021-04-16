@@ -701,6 +701,11 @@ footer section:nth-child(4){
     }
 }
 
+.welcome{
+    padding: 5px;
+    color: white;
+}
+
 /* CENTRAR ELEMENTOS FOOTER VERSION MOBILE
 footer {
     display: flex;

@@ -6,10 +6,15 @@
             </a>
         </figure>
         <% if (locals.isLogged) { %>
-
+            <div><p class='welcome'><%= 'Hola '+ locals.userLogged.first_name %></p></div>
             <div id="account">
+                
                 <ul>
-                    <li><%= 'Hola '+ locals.userLogged.first_name %> </li>
+                    <li><i class="fa fa-user-alt"></i>
+                        <ul>
+                            <li><a href="/usuario/logout">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             

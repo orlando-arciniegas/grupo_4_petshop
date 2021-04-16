@@ -178,5 +178,14 @@
   "password": "Z8mbW0",
   "rol": 1,
   "image": "user_20.jpg"
+ },
+ {
+  "id": 21,
+  "first_name": "Orlando",
+  "last_name": "Arciniegas",
+  "email": "orlandoarciniegas1508@gmail.com",
+  "password": "$2a$10$Qs6yZDidpfYYqZJPncJq7ehyQQ0Anj.3PXuA9GqGEhstYXSVMhyFC",
+  "tyc": "on",
+  "imagen": "1618617122786-logo-jbo.png"
  }
 ]
