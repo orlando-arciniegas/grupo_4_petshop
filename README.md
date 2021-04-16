@@ -50,3 +50,7 @@ Diseño responsive, adaptable a distintos dispositivos.
 ## Link a nuestro tablero de trabajo
 
 https://trello.com/b/O39veKC0/proyecto
+
+## Script de la base de datos
+
+Se encuentra dentro de la carpeta desing, debe ejecutarse en el MySQL Workbench

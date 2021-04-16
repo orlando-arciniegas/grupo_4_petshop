@@ -1,6 +1,7 @@
 const bycrypt = require('bcryptjs');
 const dbUsuarios = require('../data/models/Usuario');
 const {validationResult} = require('express-validator');
+
 const userController = {
 
     index: (req, res) => {
@@ -68,7 +69,14 @@ const userController = {
        if (userLogin) {
            let syncPassword = bycrypt.compareSync(req.body.password, userLogin.password)
             if (syncPassword) {
-                return res.send('Ingresaste exitosamente.')
+                delete userLogin.password
+                req.session.userLogged = userLogin;
+
+                if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+                }
+
+                return res.redirect('/')
             }
         return res.render("usuarios/login", {
             errors: {
@@ -85,6 +93,11 @@ const userController = {
                }
            }
        })
+    },
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
     }
 }
 

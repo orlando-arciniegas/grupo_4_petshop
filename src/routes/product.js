@@ -8,18 +8,18 @@ router.route('/')
     .get(authUser, productController.index)
 
 router.route('/detalle/:id')
-    .get(productController.show)
+    .get(authUser, productController.show)
 
 router.route('/crear')
-   .get(productController.create)
+   .get(authUser, productController.create)
    .post(uploadFile.single('imagen'), productController.save)
    
 router.route('/editar/:id')
-    .get(productController.edit)
+    .get(authUser, productController.edit)
     .put(uploadFile.single('imagen'), productController.update);
 
 router.route('/eliminar/:id')
-    .get(productController.destroy)
+    .get(authUser, productController.destroy)
     
 module.exports = router;
 

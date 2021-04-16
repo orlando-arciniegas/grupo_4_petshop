@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const authUser = require("./middlewares/authUser.js");
+const userIsLogged = require("./middlewares/userIsLogged.js");
 
 app.set('puerto', process.env.PORT || 3000);
 
@@ -30,6 +31,8 @@ app.use(session({
 
 //Aqui coloco el Middleware para activar lo referido a las cookies
 app.use(cookieParser());
+
+app.use(userIsLogged);
 
 //Middleware de aplicación que se encarga de controlar si el usuario está logueado o no.
 //app.use(authUser);

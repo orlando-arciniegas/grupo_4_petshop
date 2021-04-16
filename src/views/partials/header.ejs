@@ -5,18 +5,26 @@
                 <img src="/img/logo.png" alt="logo furry">
             </a>
         </figure>
+        <% if (locals.isLogged) { %>
 
-        <div id="account">
-            <ul>
-                <li><i class="fa fa-user-alt"></i>
-                    <ul>
-                        <li><a href="/usuario/login">Iniciar sesion</a></li>
-                        <li><a href="/usuario/register">Registrarse</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
+            <div id="account">
+                <ul>
+                    <li><%= 'Hola '+ locals.userLogged.first_name %> </li>
+                </ul>
+            </div>
+            
+        <% } else {%>
+            <div id="account">
+                <ul>
+                    <li><i class="fa fa-user-alt"></i>
+                        <ul>
+                            <li><a href="/usuario/login">Iniciar sesion</a></li>
+                            <li><a href="/usuario/register">Registrarse</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        <% } %>
         <div id="cart">
             <a href="/carrito">
                 <i class="fa fa-shopping-cart"></i>
