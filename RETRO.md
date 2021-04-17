@@ -10,8 +10,8 @@ En este archivo descargaremos la retrospectiva de lo que hemos hecho durante el 
 
 3. ¿Que deberiamos hacer?
 
-En este orden de ideas, en el primer punto hicimos un ambiente armonioso de trabajo en equipo, trabajamos de manera conjunta y pusimos manos a la obra en el proyecto.
+En este orden de ideas, en el primer punto hemos coordinado el trabajo en equipo centrandonos en las debilidades y fortalezas de los integrantes.
 
-En respuesta a nuestra segunda interrogante, no definimos tiempos para lograr los objetivos, así como tampoco nos comunicamos de manera correcta y fluida con decisiones claras.
+En respuesta a nuestra segunda interrogante, hemos dispuesto de poco tiempo para realizar los requerimientos del producto.
 
-Como punto final, respondiendo nuestra tercera interrogante. Deberiamos mejorar la comunicación y usar esta como un puente para lograr nuestros objetivos y así poder definir de manera concisa el trabajo que realizaremos.
+Como punto final, respondiendo nuestra tercera interrogante. Deberiamos mejorar la comunicación y en la medida de lo posible organizar el tiempo para hacer un trabajo optimo.
