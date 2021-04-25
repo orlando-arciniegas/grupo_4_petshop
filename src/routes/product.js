@@ -8,7 +8,7 @@ router.route('/')
     .get(authUser, productController.index)
 
 router.route('/detalle/:id')
-    .get(authUser, productController.show)
+    .get(productController.show)
 
 router.route('/crear')
    .get(authUser, productController.create)
