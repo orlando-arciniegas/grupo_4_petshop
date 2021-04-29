@@ -53,4 +53,6 @@ https://trello.com/b/O39veKC0/proyecto
 
 ## Script de la base de datos
 
-Se encuentra dentro de la carpeta desing, debe ejecutarse en el MySQL Workbench
+Se encuentra dentro de la carpeta desing, debe ejecutarse en el MySQL Workbench.
+
+Ejecutar el comando "sequelize db:seed:all" para poblar la base de datos.
