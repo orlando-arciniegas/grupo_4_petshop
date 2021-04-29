@@ -3,108 +3,104 @@
 
 <head>
     <%- include ('../partials/head.ejs') %>
-        <link rel="stylesheet" href="/css/register.css">
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="/css/register.css">
+    
 </head>
 
 <body>
     <!------------ HEADER  ---------->
     <%- include ('../partials/header.ejs') %>
 
-        <!------------ FIN HEADER  ---------->
+    <!------------ FIN HEADER  ---------->
 
-        <!------------ MAIN FORM REGISTER---------->
-        <main>
-            
-            <section class="form__register">
+    <!------------ MAIN FORM REGISTER---------->
+    <main>
 
-                <div class="register__box">
-                    <h2>!Registraté aca!</h2>
-                    
-                    <form action="/usuario/register" method="POST" id="registrar" enctype="multipart/form-data">
-                        <div class="user-box">
-                            <input type="text" name="first_name" class="form-control is-invalid" value="<%= locals.oldData ? oldData.first_name : null  %>">
-                            <label>Nombres</label>
-                            <% if (locals.errors && errors.first_name) { %>
-                             <p class="validationMsg"><%= errors.first_name.msg %></p>
-                            <% } %>
-                        </div>
-                        <div class="user-box">
-                            <input type="text" name="last_name" class="form-control is-invalid" value="<%= locals.oldData ? oldData.last_name : null  %>">
-                            <label>Apellidos</label>
-                            <% if (locals.errors && errors.last_name) { %>
-                                <p class="validationMsg"><%= errors.last_name.msg %></p>
-                            <% } %>
-                        </div>
-                        <div class="user-box">
-                            <input type="text" name="email" class="form-control is-invalid" value="<%= locals.oldData ? oldData.email : null  %>">
-                            <label>Email</label>
-                            <% if (locals.errors && errors.email) { %>
-                                <p class="validationMsg"><%= errors.email.msg %></p>
-                            <% } %>
-                        </div>
-                        <div class="user-box">
-                            <input type="password" name="password" class="form-control is-invalid">
-                            <label>Contraseña</label>
-                            <% if (locals.errors && errors.password) { %>
-                                <p class="validationMsg"><%= errors.password.msg %></p>
-                            <% } %>
-                        </div>
-                        <div class="user-box">
-                            <input type="password" name="">
-                            <label>Repetir contraseña</label>
-                        </div>
-                        <div class="btn_imagen">
-                            <label for="imagen" class="label_imagen">
-                                <i class="fa fa-upload" aria-hidden="true"></i>
-                                <span>Cargar imagen de perfil</span>
-                            </label>
-                            <input type="file" name="imagen" id="imagen" class="hidden" accept="image/*">
-                            <p id="fileName">No ha cargado ningun archivo</p>  
-                        </div>
-                        <% if (locals.errors && errors.imagen) { %>
-                            <p class="validationMsg"><%= errors.imagen.msg %></p>
-                           <% } %>
-                        <label for="" class="tyc">Aceptó los T&C <input type="checkbox" name="tyc" id=""></label>
-                        <% if (locals.errors && errors.tyc) { %>
-                            <p class="validationMsg"><%= errors.tyc.msg %></p>
-                           <% } %>
-                        <a href="/usuario/login" class="register__box__sesion">¿Ya estas registrado? Inicia sesion.</a>
+        <section class="form__register">
 
-                        <button type="submit" form="registrar" value="Submit" class="register__box__a">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Registrar
-                        </button>
-                        <button type="reset" form="registrar" value="Reset" class="register__box__a">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Borrar
-                        </button>
-                        <a href="/" class="register__box__return"> Volver atras <i class="fal fa-undo"></i></a>
-                    </form>
-                </div>
-            </section>
-        </main>
+            <div class="register__box">
+                <h2>!Registraté aca!</h2>
 
-        <!------------ FOOTER ---------->
-        <%- include ('../partials/footer.ejs') %>
+                <form action="/usuario/register" method="POST" id="registrar" enctype="multipart/form-data">
+                    <div class="user-box">
+                        <input type="text" id="first_name" name="first_name" class="form-control"
+                            value="<%= locals.oldData ? oldData.first_name : null  %>" required>
+                        <label>Nombres</label>
+                        <% if (locals.errors && errors.first_name) { %>
+                        <p class="validationMsg"><%= errors.first_name.msg %></p>
+                        <% } %>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" id="last_name" name="last_name" class="form-control"
+                            value="<%= locals.oldData ? oldData.last_name : null  %>" required>
+                        <label>Apellidos</label>
+                        <% if (locals.errors && errors.last_name) { %>
+                        <p class="validationMsg"><%= errors.last_name.msg %></p>
+                        <% } %>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" id="email" name="email" class="form-control"
+                            value="<%= locals.oldData ? oldData.email : null  %>" required>
+                        <label>Email</label>
+                        <% if (locals.errors && errors.email) { %>
+                        <p class="validationMsg"><%= errors.email.msg %></p>
+                        <% } %>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" id="password" name="password" class="form-control" required>
+                        <label>Contraseña</label>
+                        <% if (locals.errors && errors.password) { %>
+                        <p class="validationMsg"><%= errors.password.msg %></p>
+                        <% } %>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" id="repeatPassword" name="repeatPassword" required>
+                        <label>Repetir contraseña</label>
+                    </div>
+                    <div class="btn_imagen">
+                        <label for="imagen" class="label_imagen">
+                            <i class="fa fa-upload" aria-hidden="true"></i>
+                            <span>Cargar imagen de perfil</span>
+                        </label>
+                        <input type="file" name="imagen" id="imagen" class="hidden" accept="image/*">
+                        <p id="fileName">No ha cargado ningun archivo</p>
+                    </div>
+                    <% if (locals.errors && errors.imagen) { %>
+                    <p class="validationMsg"><%= errors.imagen.msg %></p>
+                    <% } %>
+                    <label for="" class="tyc">Aceptó los T&C <input type="checkbox" name="tyc" id="tyc"></label>
+                    <% if (locals.errors && errors.tyc) { %>
+                    <p class="validationMsg"><%= errors.tyc.msg %></p>
+                    <% } %>
+                    <a href="/usuario/login" class="register__box__sesion">¿Ya estas registrado? Inicia sesion.</a>
+
+                    <button type="submit" form="registrar" value="Submit" class="register__box__a">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Registrar
+                    </button>
+                    <button type="reset" form="registrar" value="Reset" class="register__box__a">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Borrar
+                    </button>
+                    <a href="/" class="register__box__return"> Volver atras <i class="fal fa-undo"></i></a>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!------------ FOOTER ---------->
+    <%- include ('../partials/footer.ejs') %>
+    <!------------ SCRIPT JS ------->
+    <script src="/js/validateRegister.js"></script>
 </body>
 
 </html>
-
-<script>
-    document.getElementById("imagen").addEventListener("change", handleFiles, false);
-    function handleFiles() {
-        const fileList = this.files; /* now you can work with the file list */
-        if (fileList.length>0) {
-            document.getElementById("fileName").innerHTML = fileList[0].name
-        } else {
-            document.getElementById("fileName").innerHTML = "No ha cargado ningun archivo"
-        }
-    
-    }
-</script>

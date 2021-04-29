@@ -51,7 +51,7 @@ const userController = {
         }
 
         newUser.password = bycrypt.hashSync(newUser.password, 10);
-
+        delete newUser.repeatPassword
         listUser.push(newUser);
 
         dbUsuarios.create(listUser)
