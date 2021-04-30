@@ -1,0 +1,73 @@
+[{
+        "id": 1,
+        "nombre": "Alimento Para Perro - Nutrecan Adulto Raza Med/Grande",
+        "descripcion": 1,
+        "imagen": "Nutrecan-Adulto-Raza-Mediana-Grande.jpg",
+        "categoria": "Alimento",
+        "precio": 6770,
+        "stock": 15
+    },
+    {
+        "id": 2,
+        "nombre": "Antipulgas Advantage gatos hasta 4 kg x0.4 ml para gato",
+        "descripcion": 1,
+        "imagen": "Antipulgas-Advantage-gatos.jpg",
+        "categoria": "Medicamentos",
+        "precio": 2500,
+        "stock": 15
+    },
+    {
+        "id": 3,
+        "nombre": "Bebedero color azul para mascotas",
+        "descripcion": 1,
+        "imagen": "Bebedero-Azul.jpg",
+        "categoria": "Accesorios",
+        "precio": 3500,
+        "stock": 15
+    },
+    {
+        "id": 4,
+        "nombre": "Kinky Collar Negro Camo Verde Huesos",
+        "descripcion": 1,
+        "imagen": "Kinky-Collar-Negro-Camo-Verde-Huesos-1.jpg",
+        "categoria": "Accesorios",
+        "precio": 1650,
+        "stock": 15
+    },
+    {
+        "id": 5,
+        "nombre": "Old Prince",
+        "descripcion": 1,
+        "imagen": "alimento-balanceado.jpg",
+        "categoria": "Accesorios",
+        "precio": 3500,
+        "stock": 10
+    },
+    {
+        "id": 6,
+        "nombre": "Hueso Kong",
+        "descripcion": 1,
+        "imagen": "hueso-kong.jpg",
+        "categoria": "Accesorios",
+        "precio": 2800,
+        "stock": 12
+    },
+    {
+        "id": 7,
+        "nombre": "Soga Juguete",
+        "descripcion": 1,
+        "imagen": "soga-morder.jpg",
+        "categoria": "Alimento",
+        "precio": 500,
+        "stock": 23
+    },
+    {
+        "id": 8,
+        "nombre": "Pretal Rainbow",
+        "descripcion": 1,
+        "imagen": "pretal-rainbow.jpg",
+        "categoria": "Accesorios",
+        "precio": 1500,
+        "stock": 5
+    }
+]

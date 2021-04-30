@@ -9,11 +9,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        first_name: {
+        firstName: {
             type: dataTypes.STRING(60),
             allowNull: false
         },
-        last_name: {
+        lastName: {
             type: dataTypes.STRING(60),
             allowNull: false
         },
@@ -29,32 +29,32 @@ module.exports = (sequelize, dataTypes) => {
         image: {
             type: dataTypes.STRING(60),
         },
-        created_at: {
+        createdAt: {
             type: dataTypes.DATE
         },
-        updated_at: {
+        updatedAt: {
             type: dataTypes.DATE
         }
     };
     let config = {
         tableName: 'users',
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        createdAt: 'createdAt',
+        updatedAt: 'updatedt',
     }
     const User = sequelize.define(alias, cols, config);
 
     User.associate = models => {
         User.hasMany(models.Cart, {
             as: 'carts',
-            foreignKey: 'user_id'
+            foreignKey: 'userId'
         })
 
-        User.belongsToMany(models.Cart, {
+        User.belongsToMany(models.Rol, {
             as:'roles',
-            through: 'user_role',
-            foreignKey: 'users_id',
-            otherKey: 'roles_id',
+            through: 'userRole',
+            foreignKey: 'usersId',
+            otherKey: 'rolesId',
             timestamps: true
         })
     }

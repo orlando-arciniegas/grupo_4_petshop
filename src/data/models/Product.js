@@ -28,46 +28,46 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(6),
             allowNull: false
         },
-        discount_percentage: {
+        discountPercentage: {
             type: dataTypes.TINYINT,
             defaultValue: 0
         },
         sku: {
             type: dataTypes.STRING(45)
         },
-        category_id: {
+        categoryId: {
             type: dataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'Category'
             }
         },
-        created_at: {
+        createdAt: {
             type: dataTypes.DATE
         },
-        updated_at: {
+        updatedAt: {
             type: dataTypes.DATE
         }
     };
     let config = {
         tableName: 'products',
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
     }
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = models => {
         Product.belongsTo(models.Category, {
             as: 'category',
-            foreignKey: 'category_id'
+            foreignKey: 'categoryId'
         })
 
         Product.belongsToMany(models.Cart, {
             as:'carts',
-            through: 'cart_product',
-            foreignKey: 'product_id',
-            otherKey: 'cart_id',
+            through: 'cartProduct',
+            foreignKey: 'productId',
+            otherKey: 'cartId',
             timestamps: true
         })
     }

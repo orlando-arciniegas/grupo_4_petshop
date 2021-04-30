@@ -1,4 +1,4 @@
-const dbUsuarios = require('../data/models/Usuario');      
+const dbUsuarios = require('../dataJson/models/Usuario');      
 
 function authUser(req, res, next){
 	if (!req.session.userLogged) {

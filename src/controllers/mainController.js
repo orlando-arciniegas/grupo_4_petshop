@@ -1,12 +1,15 @@
 const mainController = {};
-const Producto = require("../data/models/Producto");
+// const Producto = require("../dataJson/models/Producto");
+const {Product} = require("../data/models");
+
 
 
 mainController.index = (req,res) => {
-    const all = Producto.findAll();
-    const destacado = all.splice(-8);
-    return res.render("home", {destacados: destacado,
-                    user: req.session.userLogged })
+    Product.findAll().then(productos => {
+        const destacado = productos.splice(-8);
+        return res.render("home", {destacados: destacado,
+                        user: req.session.userLogged })
+    });
 }
 
 

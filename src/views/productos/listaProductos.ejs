@@ -33,12 +33,12 @@
                             <% for(let i=0; i<productos.length ; i++) { %>
                                 <tr>
                                     <td>
-                                        <%= productos[i].nombre %>
+                                        <%= productos[i].name %>
                                     </td>
                                     <td>
-                                        <%= productos[i].categoria %>
+                                        <%= productos[i].category.name %>
                                     </td>
-                                    <td>$<%= new Intl.NumberFormat('en-US').format(productos[i].precio) %></td>
+                                    <td>$<%= new Intl.NumberFormat('en-US').format(productos[i].price) %></td>
                                     <td>
                                         <%= productos[i].stock %>
                                     </td>

@@ -1,92 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs') %>
-<link rel="stylesheet" href="/css/edicionProducto.css">
-<body>
-    <!----------HEADER---------->
-    <%- include('../partials/header.ejs') %>
+    <link rel="stylesheet" href="/css/edicionProducto.css">
 
-    <!----------MAIN---------->
-    <main class="main">
-        <div class="contenedor">
-            <section class="nuevoProducto">
-                <h1 class="titulo"> Editar un Producto</h1>
-            </section>
-            <section class="form">
-                    <% productos.forEach(producto => { %>    
-                <form action="/producto/editar/<%= producto.id%>?_method=PUT" method="POST"
-                    enctype="multipart/form-data"><% }); %>
-                    <div class="campo">
-                        <strong>
-                            <label class="subtitulo" for="nombre">Nombre del producto</label>
-                        </strong>
-                        <input type="text" name="nombre" class="barra">
+    <body>
+        <!----------HEADER---------->
+        <%- include('../partials/header.ejs') %>
 
-                    </div>
-                    <div class="campo">
-                        <strong>
-                            <label class="subtitulo" for="descripcion">Descripción del Producto</label>
-                        </strong>
-                        <textarea name="descripcion" class="barra" required> </textarea>
+            <!----------MAIN---------->
+            <main class="main">
+                <div class="contenedor">
+                    <section class="nuevoProducto">
+                        <h1 class="titulo"> Editar un Producto</h1>
+                    </section>
+                    <section class="form">
+                        <form action="/producto/editar/<%= producto.id%>?_method=PUT" method="POST"
+                            enctype="multipart/form-data">
+                            <div class="campo">
+                                <strong>
+                                    <label class="subtitulo" for="nombre">Nombre del producto</label>
+                                </strong>
+                                <input type="text" name="nombre" class="barra" value="<%=producto.name || ""%>">
 
-                    </div>
-                    <div class="btn_imagen" style="margin-top: 5%;">
-                        <label for="imagen" class="label_imagen">
-                            <i class="fa fa-upload" aria-hidden="true"></i>
-                            <span>Cargar imagen del producto</span>
-                        </label>
-                        <input type="file" name="imagen" id="imagen" class="hidden" accept="image/*">
-                        <p id="fileName">No ha cargado ningun archivo</p>  
-                    </div>
+                            </div>
+                            <div class="campo">
+                                <strong>
+                                    <label class="subtitulo" for="descripcion">Descripción del Producto</label>
+                                </strong>
+                                <textarea name="descripcion" class="barra"
+                                    required><%=producto.description || ""%></textarea>
 
-                    <div class="campo">
-                        <strong>
-                            <label class="subtitulo" for="categoria">Categoría</label>
-                        </strong>
-                        <select name="categoria">
-                            <option name="alimento">Alimento</option>
-                            <option name="bellezaHigiene">Belleza e Higiene</option>
-                            <option name="accesorios">Accesorios</option>
-                            <option name="juguetes">Juguetes</option>
-                            <option name="medicamentos">Medicamentos</option>
-                            <option name="snacks">Snacks</option>
-                        </select>
+                            </div>
+                            <div class="btn_imagen" style="margin-top: 5%;">
+                                <label for="imagen" class="label_imagen">
+                                    <i class="fa fa-upload" aria-hidden="true"></i>
+                                    <span>Cargar imagen del producto</span>
+                                </label>
+                                <input type="file" name="imagen" id="imagen" class="hidden" accept="image/*">
+                                <p id="fileName">
+                                    <%=producto.image || "No ha cargado ningun archivo" %>
+                                </p>
+                            </div>
 
-                    </div>
+                            <div class="campo">
+                                <strong>
+                                    <label class="subtitulo" for="categoria">Categoría</label>
+                                </strong>
+                                <select name="categoria">
+                                    <% for(let i=0; i<categorias.length; i++) { %>
+                                        <option name="alimento" value=<%=categorias[i].id%>
+                                            <%=producto.category.id==categorias[i].id ? "selected" :""%>>
+                                                <%=categorias[i].name%>
+                                        </option>
+                                        <% } %>
 
-                    <div class="campo">
-                        <strong>
-                            <label class="subtitulo" for="precio">Precio</label>
-                        </strong>
-                        <input type="number" name="precio" class="barra">
-                    </div>
-                    <div class="campo">
-                        <strong>
-                            <label class="subtitulo" for="stock">Stock</label>
-                        </strong>
-                    </div>
-                    <div class="detalles-cantidad detalleCant">
-                        <button class="btnMenos">-</button>
-                        <input class="value" type="number" value="1" name="stock">
-                        <button class="btnMas">+</button>
-                    </div>
+                                </select>
 
-                    <div class="crearProducto">
-                        <input type="reset" value="Borrar Producto" class="btnBorrar">
-                        <input type="submit" value="Guardar Producto" class="button">
-                    </div>
-                    <div>
+                            </div>
 
-                </form>
+                            <div class="campo">
+                                <strong>
+                                    <label class="subtitulo" for="precio">Precio</label>
+                                </strong>
+                                <input type="number" name="precio" class="barra" value="<%=producto.price || ""%>">
+                            </div>
+                            <div class="campo">
+                                <strong>
+                                    <label class="subtitulo" for="stock">Stock</label>
+                                </strong>
+                            </div>
+                            <div class="detalles-cantidad detalleCant">
+                                <button class="btnMenos">-</button>
+                                <input class="value" type="number" value="<%=producto.stock || "0"%>" name="stock">
+                                <button class="btnMas">+</button>
+                            </div>
 
-            </section>
-        </div>
+                            <div class="crearProducto">
+                                <input type="reset" value="Borrar Producto" class="btnBorrar">
+                                <input type="submit" value="Guardar Producto" class="button">
+                            </div>
+                            <div>
 
-    </main>
+                        </form>
 
-    <!----------FOOTER---------->
-    <%- include('../partials/footer.ejs') %>
+                    </section>
+                </div>
 
-</body>
+            </main>
+
+            <!----------FOOTER---------->
+            <%- include('../partials/footer.ejs') %>
+
+    </body>
 
 </html>

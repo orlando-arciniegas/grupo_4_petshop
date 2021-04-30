@@ -28,16 +28,16 @@
                     <article class="producto-individual">
                         <figure>
                             <a href="producto/detalle/<%= destacados[i].id %>" >
-                                <img src="./img/productos/<%= destacados[i].imagen %>"
-                                    alt= <%= destacados[i].nombre %>>
+                                <img src="./img/productos/<%= destacados[i].image %>"
+                                    alt= <%= destacados[i].name %>>
                             </a>
                         </figure>
 
                         <div class="detalles-producto">
                             <a href="producto/detalle/<%= destacados[i].id %>" > 
-                                <strong class="descripcion"><%= destacados[i].nombre %></strong>
+                                <strong class="descripcion"><%= destacados[i].name %></strong>
                             </a>
-                            <p class="precio">$ <%= destacados[i].precio %></p>
+                            <p class="precio">$ <%= destacados[i].price %></p>
 
                             <div class="detalles-cantidad">
                                 <button type="" class="menos">-</button>

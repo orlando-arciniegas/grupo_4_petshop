@@ -1,5 +1,5 @@
 const bycrypt = require('bcryptjs');
-const dbUsuarios = require('../data/models/Usuario');
+const dbUsuarios = require('../dataJson/models/Usuario');
 const {validationResult} = require('express-validator');
 
 const userController = {
@@ -73,7 +73,7 @@ const userController = {
                 req.session.userLogged = userLogin;
 
                 if(req.body.remember_user){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 30})
                 }
 
                 return res.redirect('/')

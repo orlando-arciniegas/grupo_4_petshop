@@ -35,12 +35,9 @@
                             <label class="subtitulo" for="categoria">Categoría</label>
                         </strong>
                         <select name="categoria">
-                            <option name="alimento">Alimento</option>
-                            <option name="bellezaHigiene">Belleza e Higiene</option>
-                            <option name="accesorios">Accesorios</option>
-                            <option name="juguetes">Juguetes</option>
-                            <option name="medicamentos">Medicamentos</option>
-                            <option name="snacks">Snacks</option>
+                            <% for(let i=0; i<categorias.length ; i++) { %>
+                                <option value=<%= categorias[i].id %>><%= categorias[i].name %></option>
+                            <% } %>
                         </select>    
 
                     </div>

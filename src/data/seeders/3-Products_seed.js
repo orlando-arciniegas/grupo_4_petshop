@@ -10,8 +10,8 @@ module.exports = {
         "image": "Nutrecan-Adulto-Raza-Mediana-Grande.jpg",
         "price": 6770,
         "stock": 15,
-        "discount_percentage": 15,
-        "category_id": 1
+        "discountPercentage": 15,
+        "categoryId": 1
       },
       {
         "name": "Antipulgas Advantage gatos hasta 4 kg x0.4 ml para gato",
@@ -19,7 +19,7 @@ module.exports = {
         "image": "Antipulgas-Advantage-gatos.jpg",
         "price": 2500,
         "stock": 15,
-        "category_id": 3
+        "categoryId": 3
       },
       {
         "name": "Bebedero color azul para mascotas",
@@ -27,7 +27,7 @@ module.exports = {
         "image": "Bebedero-Azul.jpg",
         "price": 3500,
         "stock": 15,
-        "category_id": 4
+        "categoryId": 4
       },
       {
         "name": "Kinky Collar Negro Camo Verde Huesos",
@@ -35,7 +35,7 @@ module.exports = {
         "image": "Kinky-Collar-Negro-Camo-Verde-Huesos-1.jpg",
         "price": 1650,
         "stock": 15,
-        "category_id": 4
+        "categoryId": 4
       }
     ], {});
 
