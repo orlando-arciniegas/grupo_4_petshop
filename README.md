@@ -24,7 +24,7 @@ En tiempos donde es cada vez más frecuente encontrar gente con un smartphone o 
 
  ## Integrantes del equipo:
 
-Tomas Goldenhorn, 24 años, estudiante de Educación Física y Desarrollo Web Full Stack.
+Tomas Goldenhorn, 25 años, estudiante de Educación Física y Desarrollo Web Full Stack.
 
 Michael Bonilla, 25 años, Ingeniero Mecatronico y apasionado por el mundo de la programacion y la inteligencia artificial.
 
