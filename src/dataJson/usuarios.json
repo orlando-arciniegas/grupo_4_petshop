@@ -196,5 +196,14 @@
   "password": "$2a$10$qvaZKt1oz//v8ZthHViJQObG/hbYoF8NGankakmF26jl1JzpNsqFe",
   "tyc": "on",
   "imagen": "1619668225665-cable-thhn-thwn-2-negro.png"
+ },
+ {
+  "id": 23,
+  "first_name": "Tomas",
+  "last_name": "Goldenhörn",
+  "email": "tomas.goldenhorn@gmail.com",
+  "password": "$2a$10$XHLpDnx7RmlD0pTHWNEBGuBLoemfRS0o3MMarCfoI0fjmG6HHbzPK",
+  "tyc": "on",
+  "imagen": "1621531725938-tomy.jpg"
  }
 ]

@@ -127,6 +127,8 @@ header {
 }
 #account ul ul li:hover {
     background-color: #F8904E;
+    margin: auto;
+    width: 100%;
 }
 #account ul a {
     display:block;
