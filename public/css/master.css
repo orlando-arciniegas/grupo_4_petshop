@@ -116,13 +116,11 @@ header {
 }
 #account ul {
    z-index: 4;
-   border-radius: 8%;
 }
 #account ul li {
     position: relative;
     float: left;
     white-space:nowrap;
-    border-radius: 8%;
 }
 #account ul ul li {
     width: 100%;
