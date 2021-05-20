@@ -11,18 +11,17 @@
     <%- include  ('../partials/header.ejs') %>
 
     <!-- MAIN -->
-    <main class="main">
-        <figure class="figure">
-            <img class="imgProd" src="/img/productos/<%= producto.image %> " alt="<%= producto.name %>">
-            <img class="miniProd" src="/img/productos/<%= producto.image %> " alt="mini <%= producto.name %>">
+    <main class="container w-100 h-100 top bg-white">
+        <figure class="container p-4 w-100">
+            <img class="imgProd h-25 w-25 h-md-50 w-md-50" src="/img/productos/<%= producto.image %> " alt="<%= producto.name %>">
         </figure>
-        <div class="detProd">
-            <h2 class="detalle"><%= producto.name %>.</h2>
-            <h2 class="precioProd">$ <%= producto.price %></h2>
+        <div class="detProd container">
+            <h2 class="name text-center text-lg-nowrap"><%= producto.name %>.</h2>
+            <h2 class="precioProd text-center mt-3 fs-1 text-nowrap">$ <%= producto.price %></h2>
         </div>
-        <div class="agregar">
-            <button class="button" type="submit">AGREGAR AL CARRITO</button>
-            <div class="detalles-cantidad detalleCant">
+        <div class="agregar row d-flex align-items-center mb-4">
+            <button class="button col-6 mt-5 h-25" type="submit">AGREGAR AL CARRITO</button>
+            <div class="detalles-cantidad detalleCant col-6 mt-5 mt-lg-0">
                 <button type="" class="menos">-</button>
                 <input type="text" value="1">
                 <button class="mas">+</button>
