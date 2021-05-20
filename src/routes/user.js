@@ -10,7 +10,7 @@ router.route('/')
 
 router.route('/register')
     .get(guestMiddlewares, userController.register)
-    .post(uploadFile.single('imagen'), validationsRegister, userController.save)
+    .post(uploadFile.single('imagen'), validationsRegister, userController.store)
 
 router.route('/login')
     .get(guestMiddlewares, userController.login)

@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 const methodOverride = require('method-override');
 
-//Aqui requiero los paquetes para trabajar lo referido a session y cookies
+// Require for wear sessions & cookies. //
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const authUser = require("./middlewares/authUser.js");
@@ -31,7 +31,6 @@ app.use(session({
 
 //Aqui coloco el Middleware para activar lo referido a las cookies
 app.use(cookieParser());
-
 app.use(userIsLogged);
 
 //Middleware de aplicación que se encarga de controlar si el usuario está logueado o no.

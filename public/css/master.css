@@ -126,6 +126,7 @@ header {
     width: 100%;
 }
 #account ul ul li:hover {
+    border-radius: 10px;
     background-color: #F8904E;
 }
 #account ul a {
@@ -145,6 +146,7 @@ header {
     left:-50%;
     background:white;
     border: 1px solid black;
+    border-radius: 10px;
     transition: transform 0.3s;
     opacity: 0;
  }
@@ -303,11 +305,35 @@ hr {
      text-align: left;
     
  }
- .pago-envio .envio .truck {
+ .pago-envio .envio .truck{
      width: 35%;
      color: #00818e;
      font-size: 12vw;
  }
+
+ /* Animate truck */
+.truck{
+    transition: all 0.5s;
+}
+ 
+@keyframes rotar {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg); 
+	}
+}
+
+.pago-envio:hover .truck{
+	animation-name: rotar;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-out;
+}
+ /* End Animate truck */
+
  .newsletter {
     background-color: #F8904E;
     color:black;

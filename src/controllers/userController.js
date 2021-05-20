@@ -1,16 +1,79 @@
 const bycrypt = require('bcryptjs');
 const dbUsuarios = require('../dataJson/models/Usuario');
 const {validationResult} = require('express-validator');
+const dbUser = require('../data/models');
 
 const userController = {
-
+    // To show user profile. //
     index: (req, res) => {
-
+        res.send("Aqui proximamente pódras ver tu perfil de usuario.")
     },
+    // To show form register. //
     register: (req, res) => {
         return res.render("usuarios/register")
     },
-    save: (req, res) => {
+    // To save new user in database. //
+    store: (req, res) => {
+        
+        const nuevoUsuario ={
+            firstName : req.body.first_name,
+            lastName: req.body.last_name,
+            email: req.body.email,
+            password: req.body.password,
+            image: req.file.filename,
+        }
+        nuevoUsuario.password = bycrypt.hashSync(nuevoUsuario.password, 10);
+    
+        dbUser.User.create(nuevoUsuario).then(()=> {
+            return res.redirect('/usuario/login')
+        })
+    },
+    // To show form login. //
+    login: (req, res) => {
+        return res.render("usuarios/login")
+    },
+    loginProcess: (req, res) => {
+       let userLogin = dbUsuarios.findByField('email', req.body.email);
+
+       if (userLogin) {
+           let syncPassword = bycrypt.compareSync(req.body.password, userLogin.password)
+            if (syncPassword) {
+                delete userLogin.password
+                req.session.userLogged = userLogin;
+
+                if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 30})
+                }
+
+                return res.redirect('/')
+            }
+        return res.render("usuarios/login", {
+            errors: {
+                password:{
+                    msg: 'Las credenciales son invalidas.'
+                    }
+                }
+            });
+        }   
+        return res.render("usuarios/login", {
+           errors: {
+               email:{
+                   msg: 'Este email no se encuentra registrado.'
+               }
+           }
+       })
+    },
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    },
+}
+
+module.exports = userController;
+
+// Antiguo metodo utilizado cuando trabajamos con el json como db. //
+    /*save: (req, res) => {
         const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0){
@@ -59,46 +122,4 @@ const userController = {
         let userCreated = newUser
         
         res.redirect('/usuario/login')
-    },
-    login: (req, res) => {
-        return res.render("usuarios/login")
-    },
-    loginProcess: (req, res) => {
-       let userLogin = dbUsuarios.findByField('email', req.body.email);
-
-       if (userLogin) {
-           let syncPassword = bycrypt.compareSync(req.body.password, userLogin.password)
-            if (syncPassword) {
-                delete userLogin.password
-                req.session.userLogged = userLogin;
-
-                if(req.body.remember_user){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 30})
-                }
-
-                return res.redirect('/')
-            }
-        return res.render("usuarios/login", {
-            errors: {
-                password:{
-                    msg: 'Las credenciales son invalidas.'
-                    }
-                }
-            });
-        }   
-        return res.render("usuarios/login", {
-           errors: {
-               email:{
-                   msg: 'Este email no se encuentra registrado.'
-               }
-           }
-       })
-    },
-    logout: (req, res) => {
-        res.clearCookie('userEmail');
-        req.session.destroy();
-        return res.redirect('/');
-    }
-}
-
-module.exports = userController;
+    },*/
