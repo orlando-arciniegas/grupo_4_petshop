@@ -13,14 +13,14 @@
     <!-- MAIN -->
     <main class="container w-100 h-100 top bg-white">
         <figure class="container p-4 w-100">
-            <img class="imgProd h-25 w-25 h-md-50 w-md-50" src="/img/productos/<%= producto.image %> " alt="<%= producto.name %>">
+            <img class="imgProd" src="/img/productos/<%= producto.image %> " alt="<%= producto.name %>">
         </figure>
         <div class="detProd container">
             <h2 class="name text-center text-lg-nowrap"><%= producto.name %>.</h2>
-            <h2 class="precioProd text-center mt-3 fs-1 text-nowrap">$ <%= producto.price %></h2>
+            <h2 class="precioProd text-center mt-5 mb-5 fs-1 text-nowrap">$ <%= producto.price %></h2>
         </div>
         <div class="agregar row d-flex align-items-center mb-4">
-            <button class="button col-6 mt-5 h-25" type="submit">AGREGAR AL CARRITO</button>
+            <button class="button col-6 mt-5 mt-lg-0" type="submit">AGREGAR AL CARRITO</button>
             <div class="detalles-cantidad detalleCant col-6 mt-5 mt-lg-0">
                 <button type="" class="menos">-</button>
                 <input type="text" value="1">
