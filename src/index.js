@@ -2,14 +2,17 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const methodOverride = require('method-override');
+const dotenv = require('dotenv');
 
-// Require for wear sessions & cookies. //
+dotenv.config();
+
+// Require to wear sessions & cookies. //
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const authUser = require("./middlewares/authUser.js");
 const userIsLogged = require("./middlewares/userIsLogged.js");
 
-app.set('puerto', process.env.PORT || 3000);
+app.set('puerto', process.env.PORT || 3001);
 
 app.use(express.urlencoded({extended:false}))
 
@@ -17,7 +20,7 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.use(methodOverride('_method'))
 
-app.listen(app.get('puerto'), ()=> console.log(`servidor corriendo en el puerto ${app.get('puerto')}` ) )
+app.listen(app.get('puerto'), ()=> console.log(`Server on port: ${app.get('puerto')}` ) )
 
 app.set('view engine', 'ejs'); 
 
@@ -41,5 +44,6 @@ app.use(userIsLogged);
 app.use('/', require('./routes/home.js'))
 app.use('/usuario', require('./routes/user.js'))
 app.use('/producto', require('./routes/product.js'))
+app.use('/api', require('./api/routes/apiRoutes.js'))
 
 
