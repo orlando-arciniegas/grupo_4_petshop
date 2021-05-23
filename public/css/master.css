@@ -133,6 +133,7 @@ header {
     height: 35px;
     width: 100%;
     outline: none;
+    padding-left: 10px;
 }
 .search-btn {
     background-color: white;
@@ -237,6 +238,7 @@ hr {
     z-index: 0;
 }
 .producto-individual {
+    position: relative;
     margin-top: 15px;
     width: 90%;
     background-color: white;
@@ -244,6 +246,43 @@ hr {
     display: flex;
     flex-wrap: wrap;
 }
+.oferta {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+/* css triángulo */
+.texto-triangulo {
+    fill: white;
+    font-size:20px;
+    font-family:arial;
+    letter-spacing:-1px;
+
+  }
+  .texto-descuento {
+    fill: white;
+    font-size:14px;
+    font-family:arial;
+
+  }
+/* fondo */
+  .triangulo {
+    fill:#ff0000;
+    opacity:0.9;
+  }
+/* css oferta */
+/* triángulo */
+  .oferta-color {
+    fill:#7ab800;
+    opacity:0.9;
+
+  }
+/* texto */
+  .texto-oferta-color {
+    fill: white;
+    font-size:14px;
+    font-family:arial;
+  }
 .producto-individual img {
     padding: 15px;
     border-bottom: 1.7px solid #00818e;
@@ -262,6 +301,25 @@ hr {
     font-size: 5vw;
     margin-top: 10px;
 }
+.precio-descuento {
+    position: relative;
+}
+.precio-descuento:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 3px solid;
+    border-color: black;
+    
+  
+    -webkit-transform:rotate(-6deg);
+    -moz-transform:rotate(-6deg);
+    -ms-transform:rotate(-6deg);
+    -o-transform:rotate(-6deg);
+    transform:rotate(-6deg);
+  }
 .descripcion {
     color: #666;
 }
@@ -435,7 +493,7 @@ footer {
     margin-bottom: 20px;
 }
 .logo_redes_sociales img {
-    width: 40%;
+    width: 35%;
 }
 .logo_redes_sociales i {
     color: white;
@@ -773,7 +831,7 @@ footer section:nth-child(4){
         width: 25%;
     }
     .logo_redes_sociales img {
-        width: 50%;
+        width: 30%;
     }
     .logo_redes_sociales i {
         font-size: 30px;

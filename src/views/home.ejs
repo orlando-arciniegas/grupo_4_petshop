@@ -20,36 +20,11 @@
             </section>
             <section class="productos-destacados">
                 <div class="titulo">
-                    <span>PRODUCTOS DESTACADOS</span>
+                    <span><%= !busqueda?'PRODUCTOS DESTACADOS':'RESULTADO BUSQUEDA' %></span>
                 </div>
                 <hr>
 
-                <% for( let i=0; i < destacados.length; i++ ) { %>
-                    <article class="producto-individual">
-                        <figure>
-                            <a href="producto/detalle/<%= destacados[i].id %>" >
-                                <img src="./img/productos/<%= destacados[i].image %>"
-                                    alt= <%= destacados[i].name %>>
-                            </a>
-                        </figure>
-
-                        <div class="detalles-producto">
-                            <a href="producto/detalle/<%= destacados[i].id %>" > 
-                                <strong class="descripcion"><%= destacados[i].name %></strong>
-                            </a>
-                            <p class="precio">$ <%= destacados[i].price %></p>
-
-                            <div class="detalles-cantidad">
-                                <button type="" class="menos">-</button>
-                                <input type="number" value="1" min="1" max="15">
-                                <button class="mas">+</button>
-
-                                <button class="btn">Agregar al carrito <i class="fal fa-plus-circle"></i></button>
-                                <span class="errorInput">Ingrese un valor entre 1 y 15</span>
-                            </div>
-                        </div>
-                    </article>
-                <% } %>
+                <%- include ('partials/productos.ejs', {productos:destacados}) %>
                         
             </section>
 
@@ -106,7 +81,6 @@
         <!------------ FOOTER ---------->
         <%- include ('partials/footer.ejs') %>
             <!------------ FIN FOOTER ---------->
-
 </body>
 
 </html>
