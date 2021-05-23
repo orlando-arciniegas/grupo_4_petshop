@@ -1,7 +1,7 @@
 const bycrypt = require('bcryptjs');
 const dbUsuarios = require('../dataJson/models/Usuario');
 const {validationResult} = require('express-validator');
-const dbUser = require('../data/models');
+const { User } = require("../data/models");
 
 const userController = {
     // To show user profile. //
@@ -13,8 +13,19 @@ const userController = {
         return res.render("usuarios/register")
     },
     // To save new user in database. //
-    store: (req, res) => {
-        
+    store: async (req, res) => {
+        let userLogin = await User.findOne({
+            where: {email:req.body.email}
+        })
+        if (userLogin) {
+            return res.render("usuarios/register", {
+                errors: {
+                    email:{
+                        msg: 'Este email ya se encuentra registrado.'
+                        }
+                    }
+                });
+        }
         const nuevoUsuario ={
             firstName : req.body.first_name,
             lastName: req.body.last_name,
@@ -24,7 +35,7 @@ const userController = {
         }
         nuevoUsuario.password = bycrypt.hashSync(nuevoUsuario.password, 10);
     
-        dbUser.User.create(nuevoUsuario).then(()=> {
+        User.create(nuevoUsuario).then(()=> {
             return res.redirect('/usuario/login')
         })
     },
@@ -32,9 +43,11 @@ const userController = {
     login: (req, res) => {
         return res.render("usuarios/login")
     },
-    loginProcess: (req, res) => {
-       let userLogin = dbUsuarios.findByField('email', req.body.email);
-
+    loginProcess: async (req, res) => {
+       let userLogin = await User.findOne({
+           where: {email:req.body.email}
+       })
+       
        if (userLogin) {
            let syncPassword = bycrypt.compareSync(req.body.password, userLogin.password)
             if (syncPassword) {
