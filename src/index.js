@@ -45,5 +45,7 @@ app.use('/', require('./routes/home.js'))
 app.use('/usuario', require('./routes/user.js'))
 app.use('/producto', require('./routes/product.js'))
 app.use('/api', require('./api/routes/apiRoutes.js'))
+app.use('/categoria', require('./routes/category.js'))
+
 
 

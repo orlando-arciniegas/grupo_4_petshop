@@ -94,7 +94,8 @@ const productController = {
             description: req.body.descripcion,
             categoryId: req.body.categoria,
             price: req.body.precio,
-            stock: req.body.stock
+            stock: req.body.stock,
+            discountPercentage: req.body.descuento
         }
         if(req.file) {
             data.image = req.file.filename
