@@ -35,14 +35,16 @@
             </div>
         <% } %>
         <div id="cart">
-            <a href="/carrito">
-                <i class="fa fa-shopping-cart"></i>
-                <span>0</span>
-            </a>
+            <button class="bg-transparent border-0" id="carro"><i class="fa fa-shopping-cart"></i>
+            <span class="me-0">0</span></button>
+        </div>
+        <div id="sidebar" class="collapsed border-start border-dark">
+            <button id="closer" class="btn-close mt-3 ms-3" aria-label="Close" style="color: #00818e;"></button>
+            <h2 class="mx-auto text-center mt-5 text-nowrap">Carrito de Compras</h2>
         </div>
 
         <div class="burger-menu">
-            <i class="fa fa-bars"></i>
+            <button class="bg-transparent border-0" id="headerBottomToggler"><i class="fa fa-bars"></i></button>
         </div>
 
         <form action="/" method="GET" id=buscar>
@@ -50,7 +52,6 @@
             <button type="submit" class="search-btn h-25 my-1"><i class="fas fa-search fa-1x"></i></button>
         </form>
     </div>
-
     <div class="header-bottom">
         <nav class="menu">
             <ul class="mt-3">
@@ -66,4 +67,22 @@
             <a href="#">OFERTAS <i class="fas fa-tags"></i></a>
         </div>
     </div>
+    <div class="collapsed" id="header">
+        <nav class="menu">
+            <ul class="mt-2 text-center fs-5 mx-auto">
+                <li><a class="text-dark mx-auto" href="#">Alimentos</a></li>
+                <li class="mt-2 mx-auto"><a class="text-dark" href="#">Juguetes</a></li>
+                <li class="mt-2 mx-auto"><a class="text-dark" href="#">Medicamentos</a></li>
+                <li class="mt-2 mx-auto"><a class="text-dark" href="#">Accesorios</a></li>
+                <li class="mt-2 mx-auto"><a class="text-dark" href="#">Snacks</a></li>
+                <li class="mt-2 mx-auto"><a class="text-dark" href="#">Belleza e higiene</a></li>
+                <li class="ofertas mt-5">
+                    <a class="text-dark"  href="#">OFERTAS <i class="fas fa-tags"></i></a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
 </header>
+<script src="/js/carrito.js"></script>
+<script src="/js/burger.js"></script>
