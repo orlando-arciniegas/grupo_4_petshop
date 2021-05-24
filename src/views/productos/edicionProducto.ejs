@@ -11,21 +11,21 @@
             <main class="main">
                 <div class="contenedor">
                     <section class="nuevoProducto">
-                        <h1 class="titulo"> Editar un Producto</h1>
+                        <h1 class="titulo">Editar producto</h1>
                     </section>
                     <section class="form">
                         <form action="/producto/editar/<%= producto.id%>?_method=PUT" method="POST"
                             enctype="multipart/form-data">
                             <div class="campo">
                                 <strong>
-                                    <label class="subtitulo" for="nombre">Nombre del producto</label>
+                                    <label class="subtitulo" for="nombre">Nombre</label>
                                 </strong>
                                 <input type="text" name="nombre" class="barra" value="<%=producto.name || ""%>">
 
                             </div>
                             <div class="campo">
                                 <strong>
-                                    <label class="subtitulo" for="descripcion">Descripción del Producto</label>
+                                    <label class="subtitulo" for="descripcion">Descripción</label>
                                 </strong>
                                 <textarea name="descripcion" class="barra"
                                     required><%=producto.description || ""%></textarea>
@@ -75,15 +75,16 @@
                                     <label class="subtitulo" for="stock">Stock</label>
                                 </strong>
                             </div>
-                            <div class="detalles-cantidad detalleCant">
-                                <button class="btnMenos">-</button>
-                                <input class="value" type="number" value="<%=producto.stock || "0"%>" name="stock">
-                                <button class="btnMas">+</button>
+                            <div class="detalles-cantidad editStock">
+                                <button type="" class="menos">-</button>
+                                <input type="number" value="1" min="1" max="15">
+                                <button class="mas">+</button>
+                                <span class="errorInput">Ingrese un valor entre 1 y 15</span>
                             </div>
 
                             <div class="crearProducto">
-                                <input type="reset" value="Borrar Producto" class="btnBorrar">
-                                <input type="submit" value="Guardar Producto" class="button">
+                                <button type="reset" class="btnBorrar">Cancelar <i class="far fa-window-close"></i></button>
+                                <button type="submit" class="button">Editar <i class="far fa-edit"></i></button>
                             </div>
                             <div>
 

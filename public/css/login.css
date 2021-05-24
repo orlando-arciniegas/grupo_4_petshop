@@ -186,6 +186,11 @@ body {
     animation-delay: .5s
 }
 
+.validationMsg{
+    color: red; 
+    font-weight: bold;
+}
+
 @keyframes btn-anim3 {
     0% {
         right: -100%;
@@ -254,7 +259,7 @@ footer {
 @media (min-width: 1200px) {
     .register__box {
     max-width: 500px;
-    top: 70%;
+    top: 68%;
     }
     footer {
     top: 110%;

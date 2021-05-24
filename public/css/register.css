@@ -283,12 +283,13 @@ body {
 
 /* FALTA AGREGAR ESTILOS AL PARRAFO QUE MUESTRA LOS ERRORES EN EL FORMULARIO */
 .validationMsg{
-   text-align: center;
-    color: red;
-    font-size: 12px;
-    border-radius: 8px;
-    padding: 10px;
-} 
+     text-align: center;
+     color: red;
+     font-weight: bold;
+     font-size: 12px;
+     border-radius: 8px;
+     padding: 10px;
+ } 
 
 /* Clases para agregar estilo a las validaciones del formulario */
 .is-invalid{
