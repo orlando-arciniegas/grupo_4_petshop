@@ -50,11 +50,15 @@ const productController = {
         //         else {
         //             res.redirect('/producto');
         // }
+        let filename = null;
+        if(req.file) {
+            filename = req.file.filename
+        }
         const data ={
             name : req.body.nombre,
             description: req.body.descripcion,
             categoryId: req.body.categoria,
-            image: req.file.filename,
+            image: filename,
             price: req.body.precio,
             stock: req.body.stock
         }

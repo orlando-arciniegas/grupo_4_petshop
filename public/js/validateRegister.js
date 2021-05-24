@@ -1,15 +1,3 @@
-document.getElementById("imagen").addEventListener("change", handleFiles, false);
-
-function handleFiles() {
-    const fileList = this.files; /* now you can work with the file list */
-    if (fileList.length > 0) {
-        document.getElementById("fileName").innerHTML = fileList[0].name
-    } else {
-        document.getElementById("fileName").innerHTML = "No ha cargado ningun archivo"
-    }
-
-}
-
 const regex = {
     usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.

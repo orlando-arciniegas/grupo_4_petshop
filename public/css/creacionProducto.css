@@ -71,17 +71,17 @@
 }
 
 .btnMenos {
-    background-color: white;
-    width: 35px;
-    border: #F8904E solid;
-    border-radius: 5px;
+    background-color: white !important;
+    width: 35px  !important;
+    border: #F8904E solid  !important;
+    border-radius: 5px  !important;
 }
 
 .btnMas {
-    background-color: white;
-    width: 35px;
-    border: #F8904E solid;
-    border-radius: 5px;
+    background-color: white  !important;
+    width: 35px  !important;
+    border: #F8904E solid  !important;
+    border-radius: 5px  !important;
 }
 
 .value {
