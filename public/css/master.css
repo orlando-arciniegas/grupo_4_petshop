@@ -250,6 +250,7 @@ hr {
     position: absolute;
     top: 0px;
     right: 0px;
+    border-top-right-radius: 10px;
 }
 /* css triángulo */
 .texto-triangulo {
