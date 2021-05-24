@@ -1,11 +1,15 @@
-const dbUsuarios = require('../dataJson/models/Usuario');
+// const dbUsuarios = require('../dataJson/models/Usuario');
+const { User } = require("../data/models");
 
-function userIsLogged(req, res, next){
+async function userIsLogged(req, res, next){
     
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = dbUsuarios.findByField('email', emailInCookie);
+    // let userFromCookie = dbUsuarios.findByField('email', emailInCookie);
+    let userFromCookie = await User.findOne({
+        where: {email: emailInCookie || "" }
+    })
    
     if(userFromCookie){
         req.session.userLogged = userFromCookie;
