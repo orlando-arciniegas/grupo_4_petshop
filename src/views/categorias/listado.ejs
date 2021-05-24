@@ -16,12 +16,12 @@
         <!------------ MAIN  ---------->
         <main>
             <section class="productos-destacados">
-                <div class="titulo">
+                <div class="titulo mt-4">
                     <span>
                         <%= categoria.name %>
                     </span>
                 </div>
-                <hr>
+                <hr class="mt-4">
 
                 <%- include ('../partials/productos.ejs', {productos:categoria.products}) %>
             </section>
