@@ -76,14 +76,14 @@
                                 </strong>
                             </div>
                             <div class="detalles-cantidad editStock">
-                                <button type="" class="menos">-</button>
-                                <input type="number" value="1" min="1" max="15">
-                                <button class="mas">+</button>
+                                <button type="button" class="menos btnMenos">-</button>
+                                <input type="number" value="<%=producto.stock || 0%>" min="1" max="150" name="stock">
+                                <button type="button" class="mas btnMas">+</button>
                                 <span class="errorInput">Ingrese un valor entre 1 y 15</span>
                             </div>
 
                             <div class="crearProducto">
-                                <button type="reset" class="btnBorrar">Cancelar <i class="far fa-window-close"></i></button>
+                                <button type="reset" class="btnBorrar" onclick="history.back();">Cancelar <i class="far fa-window-close"></i></button>
                                 <button type="submit" class="button">Editar <i class="far fa-edit"></i></button>
                             </div>
                             <div>
@@ -97,6 +97,8 @@
 
             <!----------FOOTER---------->
             <%- include('../partials/footer.ejs') %>
+            <script src="/js/productFunctions.js"></script>
+            <script src="/js/imageButton.js"></script>
 
     </body>
 
