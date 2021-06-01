@@ -14,7 +14,7 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "tvcpw8tpu4jvgnnq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "j7rl561cgwhj6jce",
     "password": "h9geofoynjg3ezxw",
     "database": "b4n2fdg4bwp62f2j",
     "host": "tvcpw8tpu4jvgnnq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
