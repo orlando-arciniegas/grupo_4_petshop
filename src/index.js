@@ -4,23 +4,19 @@ const app = express();
 const methodOverride = require('method-override');
 const dotenv = require('dotenv');
 
-const {Sequelize} = require('sequelize');
+var mysql = require('mysql');
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
-const sequelize = new Sequelize('mysql://j7rl561cgwhj6jce:h9geofoynjg3ezxw@tvcpw8tpu4jvgnnq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/b4n2fdg4bwp62f2j', {
-    pool: {
-        max: 5,
-        min: 0,
-        acquire: 30000,
-        idle: 10000
-    }
+connection.connect();
+
+connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log('The solution is: ', rows[0].solution);
 });
 
-try {
-    sequelize.authenticate();
-    console.log('Connection has been established successfully.');
-} catch (error) {
-    console.error('Unable to connect to the database:', error);
-}
+connection.end();
+
 dotenv.config();
 
 // Require to wear sessions & cookies. //
