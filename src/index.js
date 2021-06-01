@@ -4,6 +4,16 @@ const app = express();
 const methodOverride = require('method-override');
 const dotenv = require('dotenv');
 
+const { Sequelize } = require('sequelize');
+
+// Option 1: Passing a connection URI
+const sequelize = new Sequelize('mysql://j7rl561cgwhj6jce:h9geofoynjg3ezxw@tvcpw8tpu4jvgnnq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/b4n2fdg4bwp62f2j') 
+try {
+    sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+}
 dotenv.config();
 
 // Require to wear sessions & cookies. //
