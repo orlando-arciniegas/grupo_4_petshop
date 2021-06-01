@@ -4,14 +4,21 @@ const app = express();
 const methodOverride = require('method-override');
 const dotenv = require('dotenv');
 
-const { Sequelize } = require('sequelize');
+const {Sequelize} = require('sequelize');
 
-// Option 1: Passing a connection URI
-const sequelize = new Sequelize('mysql://j7rl561cgwhj6jce:h9geofoynjg3ezxw@tvcpw8tpu4jvgnnq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/b4n2fdg4bwp62f2j') 
+const sequelize = new Sequelize('mysql://j7rl561cgwhj6jce:h9geofoynjg3ezxw@tvcpw8tpu4jvgnnq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/b4n2fdg4bwp62f2j', {
+    pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+    }
+});
+
 try {
     sequelize.authenticate();
     console.log('Connection has been established successfully.');
-  } catch (error) {
+} catch (error) {
     console.error('Unable to connect to the database:', error);
 }
 dotenv.config();
@@ -24,20 +31,22 @@ const userIsLogged = require("./middlewares/userIsLogged.js");
 
 app.set('puerto', process.env.PORT || 3001);
 
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({
+    extended: false
+}))
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.use(methodOverride('_method'))
 
-app.listen(app.get('puerto'), ()=> console.log(`Server on port: ${app.get('puerto')}` ) )
+app.listen(app.get('puerto'), () => console.log(`Server on port: ${app.get('puerto')}`))
 
-app.set('view engine', 'ejs'); 
+app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, './views'))
 
 app.use(session({
-    secret : 'topSecret',
+    secret: 'topSecret',
     resave: true,
     saveUninitialized: true,
 }))
@@ -46,18 +55,11 @@ app.use(session({
 app.use(cookieParser());
 app.use(userIsLogged);
 
-//Middleware de aplicación que se encarga de controlar si el usuario está logueado o no.
-//app.use(authUser);
-
 //------------- ROUTES -------------//
 
-app.use('/', require('./routes/home.js'))
-app.use('/usuario', require('./routes/user.js'))
-app.use('/producto', require('./routes/product.js'))
-app.use('/api', require('./api/routes/apiRoutes.js'))
-app.use('/categoria', require('./routes/category.js'))
+app.use('/', require('./routes/home.js'));
+app.use('/usuario', require('./routes/user.js'));
+app.use('/producto', require('./routes/product.js'));
+app.use('/api', require('./api/routes/apiRoutes.js')) 
+app.use('/categoria', require('./routes/category.js')) 
 app.use('/carrito', require('./routes/cart.js'))
-
-
-
-
