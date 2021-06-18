@@ -1,2 +1,2 @@
 web: npm start
-chmod 777 public
+myworker: chmod 777 public
