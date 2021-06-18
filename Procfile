@@ -1,2 +1,2 @@
 web: npm start
-chmod -R 777 public
+chmod 777 public
