@@ -1,6 +1,4 @@
 const bycrypt = require('bcryptjs');
-const dbUsuarios = require('../dataJson/models/Usuario');
-const {validationResult} = require('express-validator');
 const { User } = require("../data/models");
 
 const userController = {

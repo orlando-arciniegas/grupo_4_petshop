@@ -1,9 +1,6 @@
 const mainController = {};
-// const Producto = require("../dataJson/models/Producto");
 const { Product } = require("../data/models");
 const { Op } = require("sequelize");
-
-
 
 mainController.index = (req, res) => {
     if (req.query.buscar) {
@@ -34,10 +31,8 @@ mainController.index = (req, res) => {
     }
 }
 
-
 mainController.carrito = (req, res) => {
     return res.render("productos/carrito")
 }
-
 
 module.exports = mainController;

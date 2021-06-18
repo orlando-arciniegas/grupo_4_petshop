@@ -1,5 +1,4 @@
 const categoryController = {};
-// const Producto = require("../dataJson/models/Producto");
 const { Category } = require("../data/models");
 const { Op } = require("sequelize");
 
